@@ -47,7 +47,7 @@ header {
     margin-right: 10px;
 }
 
-.login button
+.login button,
 .sigin button {
   background: #ffffff;
   color: rgb(0, 0, 0);
@@ -103,6 +103,7 @@ header {
       margin-top: 70px;
       margin-bottom: 0 auto;
     }
+
 
 
 
