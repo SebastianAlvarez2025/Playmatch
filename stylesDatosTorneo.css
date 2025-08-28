@@ -1,6 +1,6 @@
 body {
     
-    background: url("Images/Index.jpg") no-repeat center center fixed;
+    background: url("Images/Fondo.jpg") no-repeat center center fixed;
     background-size: cover; 
 }
 
@@ -103,5 +103,6 @@ header {
       margin-top: 70px;
       margin-bottom: 0 auto;
     }
+
 
 
