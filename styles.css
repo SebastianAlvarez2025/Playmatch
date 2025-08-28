@@ -1,10 +1,7 @@
 body {
 
     background: url("Images/Index.jpg") no-repeat center center fixed;
-    background-size: cover; 
-
-  background: url("Images/Index.jpg") no-repeat center center fixed;
-  background-size: cover;
+    background-size: cover;   
 }
 
 header {
@@ -28,12 +25,6 @@ header {
 .left-size .titulo {
   margin-top: 10px;
 }
-
-
-
-
-
-
 
 .logo {
   width: 40px;            
@@ -66,7 +57,7 @@ header {
 
 .login button:hover,
 .sigin button:hover {
-  background: #0d6efd;
+  background: rgb(255,174,1);;
   transform: scale(1.1); 
 }
 
@@ -92,6 +83,50 @@ header {
 }
 
 .menu a:hover {
-  color: blue; 
+  color: rgb(255,174,1); 
   transform: scale(1.1); 
+}
+
+.cuerpo {
+  padding: 2.5rem 3.0rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.subtitulo {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #111;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  border-bottom: 4px solid rgba(0,0,0,0.12);
+  margin-top: -30px;
+}
+
+.torneos{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  align-items: start;
+}
+
+.primer-torneo{
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.imagen-torneo3 img{
+  width: 270px;
+  height: auto;
+  
 }
