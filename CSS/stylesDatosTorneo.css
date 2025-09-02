@@ -25,13 +25,6 @@ header {
 .left-size .titulo {
   margin-top: 10px;
 }
-
-
-
-
-
-
-
 .logo {
   width: 40px;            
   height: auto;
@@ -95,6 +88,7 @@ header {
 }
 
 .rectangulo{
+  position: relative;
   width: 1250px;              
   min-height: 700px;        
   background-color: #fff;    
@@ -107,8 +101,18 @@ header {
   flex-direction: column;
   justify-content: flex-end;
 }
-
-
+#rectanguloDos{
+  position: absolute;
+  width: 900px;
+  height: 580px;
+  top: 6%;
+  right: 20px;
+  margin-left: 280px;
+  z-index: 0;
+  background: #ffffff;
+  border: 2px solid #2e0000;
+  border-radius: 12px;
+}
 .botones-container {
   display: flex;
   justify-content: space-between; 
@@ -134,6 +138,7 @@ header {
   color: rgb(255, 174, 1);
   border-color: #000;  
 }
+
 
 
 
