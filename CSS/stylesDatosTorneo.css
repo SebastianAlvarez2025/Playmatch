@@ -101,17 +101,46 @@ header {
   flex-direction: column;
   justify-content: flex-end;
 }
-#rectanguloDos{
+
+.imagenEj {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.imagenEj img {
+  width: 190px;
+  border-radius: 10px;
+  position: relative;
+  top: -20px;
+  left: 35px;
+}
+.img-uno{
+  z-index: 1;
+}
+.img-dos {
+  z-index: 2;
+  top: 40px;
+}
+
+.rectanguloDos{
+  font-family: Arial;
+  font-size: 16px;
+  text-align: left; 
+  padding-left: 20px;
+  color:#000;
   position: absolute;
   width: 900px;
   height: 580px;
   top: 6%;
   right: 20px;
   margin-left: 280px;
-  z-index: 0;
+  z-index: 10;
   background: #ffffff;
   border: 2px solid #2e0000;
   border-radius: 12px;
+  
 }
 .botones-container {
   display: flex;
@@ -138,7 +167,6 @@ header {
   color: rgb(255, 174, 1);
   border-color: #000;  
 }
-
 
 
 
