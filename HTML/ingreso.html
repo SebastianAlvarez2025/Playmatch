@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+            <link rel="stylesheet" href="../CSS/stylesInicioSesion.css">
+    </head>
+    <body>
+        <header>
+            <div class = "Contenedor-General">
+                <h1 class="titulo">Play Match</h1>
+                <img src="../Images/Logo.png" alt="Logo" class="logo">
+            </div>
+        </header>
+
+        <main>
+            <div class="Contenedor-Inicio">
+
+                <h1>Bienvenido</h1>
+
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="contraseña" placeholder="Contraseña" required>
+                <a href="../HTML/olvidocontraseña.html" class="olvido">¿Olvidó su contraseña?</a>
+
+                <button type="submit" class="boton-continuar">Continuar</button>
+
+                <p class="registro">¿Aun no tiene cuenta?:<a href="../HTML/registrarse.html">Registrarse</a></p>
+
+                <div class="separador">O</div>
+
+                <button class="boton-google" onclick="location.href='#'">Continuar con Google</button>
+                <button class="boton-microsoft" onclick="location.href='#'">Continuar con Microsoft</button>
+                <button class="boton-facebook" onclick="location.href='#'">Continuar con Facebook</button>
+            </div>
+        </main>
+    </body>
+
+</html>
