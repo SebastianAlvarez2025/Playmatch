@@ -1,0 +1,47 @@
+body {
+background: url('imagenes/Fondo.jpg') no-repeat center center fixed;
+background-size: cover;
+}
+
+.g{
+    background-color: green;
+}
+
+.e{
+    background-color: yellow;
+}
+
+.p{
+    background-color: red;
+}
+
+table {
+    border: 1.5px solid black;
+    border-radius: 8px;
+    background-color: white;
+    width: 60%;
+    border-collapse: collapse;      
+    margin: 10px auto;
+    text-align: center;
+    font-family: Arial, sans-serif; 
+    overflow: hidden;
+    flex-direction: column;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12); 
+  
+    }
+    td {
+      border: 1px solid #333;
+      padding: 5px;
+    }
+    tr {
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    th {
+        color:white;
+        background-color:blue;
+    }
+    tr:hover {
+      background-color: blue;
+      color: white;
+    }
