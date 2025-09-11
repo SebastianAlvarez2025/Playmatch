@@ -88,15 +88,16 @@ header {
 }
 
 .rectangulo {
-  top: 100px;
-  left: 320px;
-    position: absolute;
+  top: 15%;
+  left: 23%;
+  position: absolute;
   display: flex;
   flex-direction: column;    
   justify-content: space-around;
   background-color: rgb(255, 255, 255); 
-  padding: 40px;
-  border-radius: 5px;
+  padding: 50px;
+  border:#000000 solid 1px; 
+  border-radius: 10px;
   margin-top: 40px;
   max-width: 800px;
   margin: 120px;
@@ -104,8 +105,9 @@ header {
 }
 .torneoInfo{
   align-items: center;
-  font-size: 13px;
+  font-size: 17px;
   font-family: 'Roboto', Arial, ;
+  font-weight: 500;
 }
 
 .buscador-torneo {
