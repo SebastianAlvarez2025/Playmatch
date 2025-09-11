@@ -2,23 +2,51 @@
 <html>
 <head>
     <title>PLAY MATCH</title>
-    <link rel="stylesheet" href="style-tabla.css">
+    <link rel="icon" type="imagen/jpg" href="../Images/favicon.jpg">
+    <link rel="stylesheet" href="../CSS/tabla-posiciones.css">
 </head>
 <body>
-    <h1 >PLAY MATCH</h1>
+    <header>
+        <div class="top-bar">
+          <div class="left-size">
+                <img class="logo" src="../Images/favicon.jpg" alt="logo">
+                <h1 class="titulo">Play Match</h1>
+                <nav class ="menu">
+                <a href="HTML/datosTorneo.html">Buscar Torneos</a>
+                <a href="partidos.html">Partidos</a>
+                <a href="equipos.html">Equipos</a>
+            </nav>
+            <a href="file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/tabla-posiciones.html"><button class="t">Tabla posiciones</button></a>
+           </div>
+        </div>
+    </header>
+    
+    <main style="height: auto;">
+        <p class="espacio"></p>
     <center>
      <div>
 
         <table class="titulo">
             <tr>
                 <td>
-                    <img src="imagenes/balon.png" width="200px" hieght="200px">
+                    <img src="../Images/balon.jpg" width="200px" hieght="200px">
                 </td>
 
                 <td>
                     <h1>
                         nombre del torneo
                     </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button>CLASIFICACION</button>
+                    <button>PARTIDOS</button>
+                    <button>RESULTADO</button>
+                </td>
+                <td>
+                    <button>ANOTADORES</button>
+                    <button>NOTIFICACIONES</button>
                 </td>
             </tr>
         </table>
@@ -32,9 +60,9 @@
                     <th>PJ</th><th>PG</th><th>PP</th><th>PE</th>
                     <th>DG</th><th>GF</th><th>GC</th><th>ENFRENTAMIENTOS</th>
                 </tr>
-                <tr onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/playmach/Equipo.html'">
+                <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
                     <td class="posicion"><center>1</center></td>
-                    <td><center><img src="imagenes/eq1.png" width="50px" height="50px" ></center></td>
+                    <td><center><img src="../Images/eq1.png" width="50px" height="50px" ></center></td>
                     <td>nombre</td>
                     <td>32</td>
                     <td>20</td>
@@ -57,9 +85,9 @@
                     </td>
                 </tr>
 
-                <tr onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/playmach/Equipo.html'">
-                    <td class="posicion2"><center>2</center></td>
-                    <td><center><img src="imagenes/eq2.png" width="50px" height="50px" ></center></td>
+                <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>2</center></td>
+                    <td><center><img src="../Images/eq2.png" width="50px" height="50px" ></center></td>
                     <td>nombre</td>
                     <td>32</td>
                     <td>20</td>
@@ -82,9 +110,9 @@
                     </td>
                 </tr>
 
-                 <tr onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/playmach/Equipo.html'">
-                    <td class="posicion3"><center>3</center></td>
-                    <td><center><img src="imagenes/eq3.png" width="50px" height="50px" ></center></td>
+                 <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>3</center></td>
+                    <td><center><img src="../Images/eq3.png" width="50px" height="50px" ></center></td>
                     <td>nombre</td>
                     <td>32</td>
                     <td>20</td>
@@ -110,10 +138,178 @@
             </table>
     </center>
 
-    <table type="">
+    <center>
+            <table class="tabla">
+                <tr>
+                    <th>#</th><th>ESCUDO</th><th>NOMBRE</th><th>PTS</th>
+                    <th>PJ</th><th>PG</th><th>PP</th><th>PE</th>
+                    <th>DG</th><th>GF</th><th>GC</th><th>ENFRENTAMIENTOS</th>
+                </tr>
+                <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>1</center></td>
+                    <td><center><img src="../Images/eq1.png" width="50px" height="50px" ></center></td>
+                    <td>nombre</td>
+                    <td>32</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>
+                        <table border="1" cellpadding="8" cellspacing="0" width="70%">
+                            <tr>
+                                <td class="g">g</td>
+                                <td class="e">e</td>
+                                <td class="g">g</td>
+                                <td class="g">g</td>
+                                <td class="p">p</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>2</center></td>
+                    <td><center><img src="../Images/eq2.png" width="50px" height="50px" ></center></td>
+                    <td>nombre</td>
+                    <td>32</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>
+                        <table border="1" cellpadding="8" cellspacing="0" width="70%">
+                            <tr>
+                                <td class="g">g</td>
+                                <td class="e">e</td>
+                                <td class="g">g</td>
+                                <td class="g">g</td>
+                                <td class="p">p</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                 <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>3</center></td>
+                    <td><center><img src="../Images/eq3.png" width="50px" height="50px" ></center></td>
+                    <td>nombre</td>
+                    <td>32</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>
+                        <table border="1" cellpadding="8" cellspacing="0" width="70%">
+                            <tr>
+                                <td class="g">g</td>
+                                <td class="e">e</td>
+                                <td class="g">g</td>
+                                <td class="g">g</td>
+                                <td class="p">p</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+    </center>
+
+    <center>
+            <table class="tabla">
+                <tr>
+                    <th>#</th><th>ESCUDO</th><th>NOMBRE</th><th>PTS</th>
+                    <th>PJ</th><th>PG</th><th>PP</th><th>PE</th>
+                    <th>DG</th><th>GF</th><th>GC</th><th>ENFRENTAMIENTOS</th>
+                </tr>
+                <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>1</center></td>
+                    <td><center><img src="../Images/eq1.png" width="50px" height="50px" ></center></td>
+                    <td>nombre</td>
+                    <td>32</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>
+                        <table border="1" cellpadding="8" cellspacing="0" width="70%">
+                            <tr>
+                                <td class="g">g</td>
+                                <td class="e">e</td>
+                                <td class="g">g</td>
+                                <td class="g">g</td>
+                                <td class="p">p</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>2</center></td>
+                    <td><center><img src="../Images/eq2.png" width="50px" height="50px" ></center></td>
+                    <td>nombre</td>
+                    <td>32</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>
+                        <table border="1" cellpadding="8" cellspacing="0" width="70%">
+                            <tr>
+                                <td class="g">g</td>
+                                <td class="e">e</td>
+                                <td class="g">g</td>
+                                <td class="g">g</td>
+                                <td class="p">p</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                 <tr class="efecto" onclick="window.location.href='file:///C:/Users/corre/OneDrive/Documentos/GitHub/Playmatch/HTML/Equipo.html'">
+                    <td class="posicion"><center>3</center></td>
+                    <td><center><img src="../Images/eq3.png" width="50px" height="50px" ></center></td>
+                    <td>nombre</td>
+                    <td>32</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>17</td>
+                    <td>9</td>
+                    <td>
+                        <table border="1" cellpadding="8" cellspacing="0" width="70%">
+                            <tr>
+                                <td class="g">g</td>
+                                <td class="e">e</td>
+                                <td class="g">g</td>
+                                <td class="g">g</td>
+                                <td class="p">p</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+    </center>
 
 
-    </table>
+    </main>
 
     
 </body>
