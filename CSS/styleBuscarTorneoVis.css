@@ -88,18 +88,18 @@ header {
 }
 
 .rectangulo {
-  position: absolute;
   top: 100px;
   left: 320px;
   display: flex;
-  flex-direction: column; 
-  justify-content: space-around; 
+  flex-direction: column;    
+    align-items: center;
+  justify-content: center;
   background-color: rgb(255, 255, 255); 
   padding: 40px;
   border-radius: 5px;
   margin-top: 40px;
   max-width: 800px;
-  margin: 80px ;
+  margin: 0 auto ;
   color: #000000;
 }
 .torneoInfo{
