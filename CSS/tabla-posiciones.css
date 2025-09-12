@@ -8,12 +8,13 @@ background-size: cover;
 }
 
 header {
+  background: url('../Images/Fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 10px;
-  background: #2880bf;
   z-index: 1000;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
