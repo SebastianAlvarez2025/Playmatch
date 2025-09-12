@@ -71,7 +71,7 @@ header {
   border: 1px solid black;
   padding: 8px 12px;
   border-radius: 5px;
-  gap: 20px;
+  gap: 25px;
   white-space: nowrap;
 }
 
@@ -84,6 +84,8 @@ header {
 }
 
 .menu a:hover {
+  background-color:  #f0f0f0; 
   color: rgb(255,174,1); 
   transform: scale(1.1); 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
