@@ -1,0 +1,40 @@
+
+.rectangulo {
+  gap: 20px;
+  top: 10px;
+  left: 100px;
+  height: 750px;
+  width: 1500px;
+  position: absolute;
+  display: flexbox;
+  flex-direction: row;    
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255); 
+  border:#000000 solid 2px; 
+  border-radius: 10px;
+  margin-top: 20px;
+  margin: 120px;
+  color: #000000;
+}
+.columnas-verticales {
+    position:absolute;
+    right: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.filas-horizontales {
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+.cuadro-individual {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000000;
+    background-color: white;
+    border-radius: 5px;
+}
+
