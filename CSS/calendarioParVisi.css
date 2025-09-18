@@ -1,112 +1,44 @@
- .rectangulo {
-      position: absolute;
-      top: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 1000px;
-      height: 400px;
-      background-color: white;
-      border: 2px solid #000000;
-      border-radius: 10px;
-      position: relative;
-    }
 
-    /* CUADROS DE EQUIPOS - LADO IZQUIERDO */
-    .equipo-cuadro {
-      position: absolute;
-      width: 120px;
-      height: 60px;
-      border: 2px solid #ccc;
-      background: white;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 5px;
-    }
+.tabla-partidos {
+  font-size: 16px;
+  color: #000000;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px #000000 solid;
+}
 
-    /* CUADROS VACÍOS CON X */
-    .cuadro-vacio {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      border: 2px solid #ccc;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      color: #ccc;
-    }
+.tabla-partidos table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
 
-    /* LOGOS DE EQUIPOS */
-    .logo {
-      width: 30px;
-      height: 30px;
-      border-radius: 3px;
-    }
+.tabla-partidos th, .tabla-partidos td {
+  border: 2px solid black;
+  padding: 12px;
+  font-size: 16px;
+}
 
-    /* TEXTO DE EQUIPOS */
-    .nombre-equipo {
-      font-size: 12px;
-      font-weight: bold;
-    }
+.tabla-partidos th {
+  background: #f3f3f3;
+  font-weight: bold;
+}
+.equipo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 10px;
+}
 
-    /* FECHAS Y HORARIOS */
-    .fecha-hora {
-      position: absolute;
-      font-size: 11px;
-      color: #666;
-      background: #f0f8ff;
-      padding: 2px 6px;
-      border-radius: 10px;
-    }
-
-    /* TEXTO VS */
-    .vs-texto {
-      position: absolute;
-      font-size: 12px;
-      font-weight: bold;
-      color: #666;
-      background: white;
-      padding: 2px 8px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-
+.equipo img {
+  width: 35px;   
+  height: 35px;
+  object-fit: contain;
+}
     
-    .equipo-1 { top: 30px; left: 50px; }
-    .equipo-2 { top: 100px; left: 50px; }   
-    .equipo-3 { top: 220px; left: 50px; }
-    .equipo-4 { top: 290px; left: 50px; } 
-
-   
-    .equipo-5 { top: 30px; right: 50px; }
-    .equipo-6 { top: 100px; right: 50px; }
-    .equipo-7 { top: 220px; right: 50px; }
-    .equipo-8 { top: 290px; right: 50px; } 
-
-    
-    .semi-izq { top: 60px; left: 250px; }
-    .semi-der { top: 60px; right: 250px; }
-    .semi-izq-2 { top: 240px; left: 250px; }
-    .semi-der-2 { top: 240px; right: 250px; }
-
-    
-    .final-izq { top: 100px; left: 380px; }
-    .final-der { top: 100px; right: 380px; }
-    .final { top: 150px; left: 50%; transform: translateX(-50%); }
-
-    
-    .fecha-1 { top: 95px; left: 50px; }
-    .fecha-2 { top: 355px; left: 50px; }
-    .fecha-3 { top: 95px; right: 50px; }
-    .fecha-4 { top: 355px; right: 50px; }
-
-    
-    .vs-1 { top: 65px; left: 190px; }
-    .vs-2 { top: 255px; left: 190px; }
-    .vs-3 { top: 160px; left: 340px; }
-    .vs-4 { top: 65px; right: 190px; }
-    .vs-5 { top: 255px; right: 190px; }
-    .vs-6 { top: 160px; right: 340px; } 
