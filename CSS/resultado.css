@@ -8,7 +8,7 @@
 
 /* FONDO */
 body {
-    background:url('imagenes/Fondo.jpg');
+    background:url('../Images/Fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color: #333333;
