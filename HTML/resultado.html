@@ -3,459 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de Torneos</title>
+    <title>play match</title>
+    <link rel="icon" type="imagen/jpg" href="imagenes/Logo.png">
     <link rel="stylesheet" href="resultado.css">
 </head>
 <body>
 
-    <div class="container">
+    
         <header>
-            <h1>Resultados de Torneos</h1>
-            <p class="subtitle">Selecciona torneo y jornada para ver los partidos</p>
+          <div class="top-bar">
+          <div class="left-size">
+                <img class="logo" src="imagenes/Logo.png" alt="logo">
+                <h1 class="titulo">Play Match</h1>
+                <nav class ="menu">
+                <a href="HTML/datosTorneo.html">Buscar Torneos</a>
+                <a href="partidos.html">Partidos</a>
+                <a href="equipos.html">Equipos</a>
+            </nav>
+            <a href="file:///C:/Users/corre/OneDrive/Documentos/playmach/tabla-posiciones.html"><button class="t">Tabla posiciones</button></a>
+           </div>
+        </div>
         </header>
-        
+
+       
         <div class="filtros">
-            <select id="selectTorneo" onchange="cambiarTorneo()">
-                <option value="todos">Todos los torneos</option>
-                <option value="trinche">Copa Trinche</option>
-                <option value="revancha">Copa guerrillero</option>
-                <option value="divas">Copa Las Divas</option>
+          
+            <select>
+                <option>Todos los torneos</option>
+                <option>Copa Trinche</option>
+                <option>Copa Revancha</option>
+                <option>Copa Las Divas</option>
             </select>
             
-            <select id="selectJornada" onchange="cambiarJornada()">
-                <option value="todas">Todas las jornadas</option>
-                <option value="1">Jornada 1</option>
-                <option value="2">Jornada 2</option>
-                <option value="3">Jornada 3</option>
-                <option value="4">Jornada 4</option>
-            
+            <select>
+                <option>Todas las jornadas</option>
+                <option>Jornada 1</option>
+                <option>Jornada 2</option>
+                <option>Jornada 3</option>
+                <option>Jornada 4</option>
             </select>
             
-            <input type="date" id="fechaFiltro" placeholder="Filtrar por fecha">
+            <input type="date" placeholder="Filtrar por fecha">
         </div>
-        
-        <div class="partidos-lista" id="partidosContainer">
-            <!-- Los partidos se cargarán dinámicamente con JavaScript -->
-        </div>
-    </div>
-
-    <script>
-        // Base de datos de partidos por torneo y jornada
-        const partidosData = {
-            trinche: {
-                1: [
-                    {
-                        id: "trinche-1-1",
-                        jornada: 1,
-                        fecha: "12/09/2025",
-                        local: "Tigres FC",
-                        visitante: "Águilas Doradas",
-                        resultado: "3 - 1",
-                        estadisticas: {
-                            posesion: [60, 40],
-                            tiros: [15, 8],
-                            tirosPuerta: [7, 3],
-                            corners: [5, 2]
-                        },
-                        goles: [
-                            { minuto: 25, jugador: "Juan cruz", detalle: "Asistencia: Carlos López" },
-                            { minuto: 52, jugador: "diver", detalle: "Penal" },
-                            { minuto: 67, jugador: "andres", detalle: "Tiro libre" },
-                            { minuto: 89, jugador: "Andrés cruz", detalle: "Águilas Doradas", esVisitante: true }
-                        ],
-                        tarjetas: [
-                            { minuto: 32, jugador: "Neyder ", tipo: "amarilla", detalle: "Falta dura" },
-                            { minuto: 71, jugador: "alejandro", tipo: "amarilla", detalle: "Mano" }
-                        ]
-                    },
-                    {
-                        id: "trinche-1-2",
-                        jornada: 1,
-                        fecha: "12/09/2025",
-                        local: "Leones del Sur",
-                        visitante: "Cóndores FC",
-                        resultado: "2 - 2",
-                        estadisticas: {
-                            posesion: [50, 50],
-                            tiros: [12, 14],
-                            tirosPuerta: [5, 6],
-                            corners: [4, 7]
-                        },
-                        goles: [
-                            { minuto: 18, jugador: "Carlos Rojas", detalle: "Tiro exterior" },
-                            { minuto: 34, jugador: "Miguel Angel", detalle: "Cóndores FC", esVisitante: true },
-                            { minuto: 67, jugador: "Pedro Navarro", detalle: "Penal" },
-                            { minuto: 89, jugador: "Javier López", detalle: "Cóndores FC", esVisitante: true }
-                        ],
-                        tarjetas: [
-                            { minuto: 45, jugador: "Luis Mendoza", tipo: "amarilla", detalle: "Falta" }
-                        ]
-                    }
-                ],
-                2: [
-                    {
-                        id: "trinche-2-1",
-                        jornada: 2,
-                        fecha: "19/09/2025",
-                        local: "Tigres FC",
-                        visitante: "Leones del Sur",
-                        resultado: "1 - 0",
-                        estadisticas: {
-                            posesion: [55, 45],
-                            tiros: [14, 9],
-                            tirosPuerta: [6, 2],
-                            corners: [6, 3]
-                        },
-                        goles: [
-                            { minuto: 78, jugador: "Miguel Rodríguez", detalle: "Cabezazo" }
-                        ],
-                        tarjetas: [
-                            { minuto: 32, jugador: "Carlos López", tipo: "amarilla", detalle: "Entrada dura" },
-                            { minuto: 65, jugador: "Pedro Navarro", tipo: "amarilla", detalle: "Mano", esVisitante: true }
-                        ]
-                    }
-                ],
-                3: [
-                    {
-                        id: "trinche-3-1",
-                        jornada: 3,
-                        fecha: "26/09/2025",
-                        local: "Águilas Doradas",
-                        visitante: "Cóndores FC",
-                        resultado: "0 - 0",
-                        estadisticas: {
-                            posesion: [48, 52],
-                            tiros: [10, 13],
-                            tirosPuerta: [3, 5],
-                            corners: [4, 8]
-                        },
-                        goles: [],
-                        tarjetas: [
-                            { minuto: 28, jugador: "Fernando Martínez", tipo: "amarilla", detalle: "Falta táctica" },
-                            { minuto: 61, jugador: "Jorge Ramírez", tipo: "amarilla", detalle: "Protesta" },
-                            { minuto: 83, jugador: "Ricardo Sánchez", tipo: "amarilla", detalle: "Entrada dura" }
-                        ]
-                    }
-                ]
-            },
-            revancha: {
-                1: [
-                    {
-                        id: "revancha-1-1",
-                        jornada: 1,
-                        fecha: "10/09/2025",
-                        local: "Dragones Rojos",
-                        visitante: "Halcones FC",
-                        resultado: "4 - 2",
-                        estadisticas: {
-                            posesion: [58, 42],
-                            tiros: [18, 10],
-                            tirosPuerta: [9, 4],
-                            corners: [7, 3]
-                        },
-                        goles: [
-                            { minuto: 12, jugador: "Raúl Vargas", detalle: "Halcones FC", esVisitante: true },
-                            { minuto: 23, jugador: "Martín Herrera", detalle: "Empate" },
-                            { minuto: 41, jugador: "Oscar Ríos", detalle: "Halcones FC", esVisitante: true },
-                            { minuto: 55, jugador: "Martín Herrera", detalle: "Empate" },
-                            { minuto: 68, jugador: "Raúl Vargas", detalle: "Dragones Rojos" },
-                            { minuto: 81, jugador: "Santiago Mora", detalle: "Dragones Rojos" }
-                        ],
-                        tarjetas: [
-                            { minuto: 33, jugador: "Martín Herrera", tipo: "amarilla", detalle: "Celebración" },
-                            { minuto: 51, jugador: "Héctor Castro", tipo: "amarilla", detalle: "Falta" },
-                            { minuto: 76, jugador: "Diego Rojas", tipo: "roja", detalle: "Segunda amarilla" }
-                        ]
-                    }
-                ],
-                2: [
-                    {
-                        id: "revancha-2-1",
-                        jornada: 2,
-                        fecha: "17/09/2025",
-                        local: "Halcones FC",
-                        visitante: "Panteras Negras",
-                        resultado: "1 - 1",
-                        estadisticas: {
-                            posesion: [52, 48],
-                            tiros: [13, 11],
-                            tirosPuerta: [5, 4],
-                            corners: [5, 4]
-                        },
-                        goles: [
-                            { minuto: 34, jugador: "Carlos Jiménez", detalle: "Halcones FC" },
-                            { minuto: 67, jugador: "Roberto Silva", detalle: "Panteras Negras", esVisitante: true }
-                        ],
-                        tarjetas: [
-                            { minuto: 45, jugador: "Luis Fernández", tipo: "amarilla", detalle: "Falta" }
-                        ]
-                    }
-                ]
-            },
-            divas: {
-                1: [
-                    {
-                        id: "divas-1-1",
-                        jornada: 1,
-                        fecha: "15/09/2025",
-                        local: "Amazonas FC",
-                        visitante: "Valkirias",
-                        resultado: "0 - 0",
-                        estadisticas: {
-                            posesion: [45, 55],
-                            tiros: [9, 12],
-                            tirosPuerta: [3, 5],
-                            corners: [4, 6]
-                        },
-                        goles: [],
-                        tarjetas: [
-                            { minuto: 28, jugador: "Fernando Martínez", tipo: "amarilla", detalle: "Falta táctica" },
-                            { minuto: 61, jugador: "Jorge Ramírez", tipo: "amarilla", detalle: "Protesta" },
-                            { minuto: 83, jugador: "Ricardo Sánchez", tipo: "amarilla", detalle: "Entrada dura" }
-                        ]
-                    }
-                ],
-                2: [
-                    {
-                        id: "divas-2-1",
-                        jornada: 2,
-                        fecha: "22/09/2025",
-                        local: "Valkirias",
-                        visitante: "Guerreras FC",
-                        resultado: "3 - 0",
-                        estadisticas: {
-                            posesion: [62, 38],
-                            tiros: [16, 7],
-                            tirosPuerta: [8, 2],
-                            corners: [8, 2]
-                        },
-                        goles: [
-                            { minuto: 25, jugador: "Ana García", detalle: "Tiro libre" },
-                            { minuto: 52, jugador: "María Rodríguez", detalle: "Contraataque" },
-                            { minuto: 78, jugador: "Laura Martínez", detalle: "Cabezazo" }
-                        ],
-                        tarjetas: []
-                    }
-                ]
-            }
-        };
-
-        // Árbitros por torneo
-        const arbitrosTorneos = {
-            trinche: {
-                central: "Jorge Bautista",
-                asistentes: "Jesús Cañón, Sebastián Alvarez, Kevin Cerpa"
-            },
-            revancha: {
-                central: "Roberto Díaz",
-                asistentes: "Miguel Ángel, Carlos López, Luis García"
-            },
-            divas: {
-                central: "María Fernández",
-                asistentes: "Ana Martínez, Carmen López, Sofia Rodríguez"
-            },
-            libertadores: {
-                central: "Néstor Pitana",
-                asistentes: "Hernán Maidana, Juan Pablo Belatti, Mauro Vigliano"
-            },
-            sudamericana: {
-                central: "Wilmar Roldán",
-                asistentes: "Alexander Guzmán, Jhon León, Nicolás Gallo"
-            },
-            default: {
-                central: "Árbitro Principal",
-                asistentes: "Asistente 1, Asistente 2, Cuarto Árbitro"
-            }
-        };
-
-        function getArbitros(torneo) {
-            return arbitrosTorneos[torneo] || arbitrosTorneos.default;
-        }
-
-        function toggleDetalles(element) {
-            const partido = element.parentElement;
-            const detalles = partido.querySelector('.partido-detalles');
-            const flecha = element.querySelector('.flecha');
-            
-            // Cerrar todos los demás partidos
-            document.querySelectorAll('.partido').forEach(p => {
-                if (p !== partido) {
-                    p.classList.remove('activo');
-                    p.querySelector('.partido-detalles').style.maxHeight = '0';
-                    p.querySelector('.flecha').textContent = '▼';
-                }
-            });
-            
-            // Alternar el partido actual
-            partido.classList.toggle('activo');
-            
-            if (partido.classList.contains('activo')) {
-                detalles.style.maxHeight = detalles.scrollHeight + 'px';
-                flecha.textContent = '▲';
-            } else {
-                detalles.style.maxHeight = '0';
-                flecha.textContent = '▼';
-            }
-        }
-
-        function cambiarTorneo() {
-            const torneo = document.getElementById('selectTorneo').value;
-            const jornada = document.getElementById('selectJornada').value;
-            cargarPartidos(torneo, jornada);
-        }
-
-        function cambiarJornada() {
-            const torneo = document.getElementById('selectTorneo').value;
-            const jornada = document.getElementById('selectJornada').value;
-            cargarPartidos(torneo, jornada);
-        }
-
-        function cargarPartidos(torneo, jornada) {
-            const container = document.getElementById('partidosContainer');
-            container.innerHTML = '';
-
-            let partidos = [];
-
-            if (torneo === 'todos') {
-                // Mostrar partidos de todos los torneos
-                Object.keys(partidosData).forEach(torneoKey => {
-                    if (jornada === 'todas') {
-                        Object.keys(partidosData[torneoKey]).forEach(jornadaKey => {
-                            partidos = partidos.concat(partidosData[torneoKey][jornadaKey]);
-                        });
-                    } else if (partidosData[torneoKey][jornada]) {
-                        partidos = partidos.concat(partidosData[torneoKey][jornada]);
-                    }
-                });
-            } else if (partidosData[torneo]) {
-                if (jornada === 'todas') {
-                    Object.keys(partidosData[torneo]).forEach(jornadaKey => {
-                        partidos = partidos.concat(partidosData[torneo][jornadaKey]);
-                    });
-                } else if (partidosData[torneo][jornada]) {
-                    partidos = partidosData[torneo][jornada];
-                }
-            }
-
-            if (partidos.length === 0) {
-                container.innerHTML = `
-                    <div class="no-partidos">
-                        <h3>No hay partidos disponibles</h3>
-                        <p>No se encontraron partidos para los filtros seleccionados</p>
+      
+        <center>
+        <div class="partidos-lista">
+            <!-- PARTIDO 1 -->
+            <div class="partido">
+                <input type="checkbox" id="partido1" class="partido-checkbox">
+                <label for="partido1" class="partido-encabezado">
+                    <div class="partido-info">
+                        <span>Jornada 1</span>
+                        <span>12/09/2025</span>
                     </div>
-                `;
-                return;
-            }
-
-            partidos.forEach(partido => {
-                const arbitros = getArbitros(torneo === 'todos' ? 'default' : torneo);
-                const partidoHTML = crearHTMLPartido(partido, arbitros);
-                container.innerHTML += partidoHTML;
-            });
-        }
-
-        function crearHTMLPartido(partido, arbitros) {
-            return `
-                <div class="partido">
-                    <div class="partido-encabezado" onclick="toggleDetalles(this)">
-                        <div class="partido-info">
-                            <span>Jornada ${partido.jornada}</span>
-                            <span>${partido.fecha}</span>
-                        </div>
-                        <div class="equipos">
-                            <span class="equipo">${partido.local}</span>
-                            <span class="resultado">${partido.resultado}</span>
-                            <span class="equipo">${partido.visitante}</span>
-                        </div>
-                        <span class="flecha">▼</span>
+                    <div class="equipos">
+                        <span class="equipo">Tigres FC</span>
+                        <span class="resultado">3 - 1</span>
+                        <span class="equipo">Águilas Doradas</span>
                     </div>
-                    
-                    <div class="partido-detalles">
-                        <div class="detalles-cuerpo">
-                            <div class="seccion">
-                                <h3>Estadísticas del Partido</h3>
-                                <div class="estadistica-item">
-                                    <span class="estadistica-nombre">Posesión de balón</span>
-                                    <div class="estadistica-valores">
-                                        <span class="valor-local">${partido.estadisticas.posesion[0]}%</span>
-                                        <span class="separador">-</span>
-                                        <span class="valor-visitante">${partido.estadisticas.posesion[1]}%</span>
-                                    </div>
-                                </div>
-                                <div class="estadistica-item">
-                                    <span class="estadistica-nombre">Tiros totales</span>
-                                    <div class="estadistica-valores">
-                                        <span class="valor-local">${partido.estadisticas.tiros[0]}</span>
-                                        <span class="separador">-</span>
-                                        <span class="valor-visitante">${partido.estadisticas.tiros[1]}</span>
-                                    </div>
-                                </div>
-                                <div class="estadistica-item">
-                                    <span class="estadistica-nombre">Tiros a puerta</span>
-                                    <div class="estadistica-valores">
-                                        <span class="valor-local">${partido.estadisticas.tirosPuerta[0]}</span>
-                                        <span class="separador">-</span>
-                                        <span class="valor-visitante">${partido.estadisticas.tirosPuerta[1]}</span>
-                                    </div>
-                                </div>
-                                <div class="estadistica-item">
-                                    <span class="estadistica-nombre">Tiros de esquina</span>
-                                    <div class="estadistica-valores">
-                                        <span class="valor-local">${partido.estadisticas.corners[0]}</span>
-                                        <span class="separador">-</span>
-                                        <span class="valor-visitante">${partido.estadisticas.corners[1]}</span>
-                                    </div>
+                    <span class="flecha">▼</span>
+                </label>
+                
+                <div class="partido-detalles">
+                    <div class="detalles-cuerpo">
+                        <div class="seccion">
+                            <h3>Estadísticas del Partido</h3>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Posesión de balón</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">60%</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">40%</span>
                                 </div>
                             </div>
-                            
-                            ${partido.goles.length > 0 ? `
-                            <div class="seccion">
-                                <h3>Goles</h3>
-                                ${partido.goles.map(gol => `
-                                    <div class="evento">
-                                        <span class="minuto gol">${gol.minuto}'</span>
-                                        <span class="jugador">${gol.jugador}</span>
-                                        <span class="detalle">${gol.detalle}</span>
-                                    </div>
-                                `).join('')}
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros totales</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">15</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">8</span>
+                                </div>
                             </div>
-                            ` : ''}
-                            
-                            ${partido.tarjetas.length > 0 ? `
-                            <div class="seccion">
-                                <h3>Tarjetas</h3>
-                                ${partido.tarjetas.map(tarjeta => `
-                                    <div class="evento">
-                                        <span class="minuto ${tarjeta.tipo}">${tarjeta.minuto}'</span>
-                                        <span class="jugador">${tarjeta.jugador}</span>
-                                        <span class="detalle">${tarjeta.detalle}</span>
-                                    </div>
-                                `).join('')}
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros a puerta</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">7</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">3</span>
+                                </div>
                             </div>
-                            ` : ''}
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros de esquina</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">5</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion">
+                            <h3>Goles</h3>
+                            <div class="evento">
+                                <span class="minuto gol">25'</span>
+                                <span class="jugador">Juan cruz</span>
+                                <span class="detalle">Asistencia: Carlos López</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto gol">52'</span>
+                                <span class="jugador">diver</span>
+                                <span class="detalle">Penal</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto gol">67'</span>
+                                <span class="jugador">andres</span>
+                                <span class="detalle">Tiro libre</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto gol">89'</span>
+                                <span class="jugador">Andrés cruz</span>
+                                <span class="detalle">(Águilas Doradas)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion">
+                            <h3>Tarjetas</h3>
+                            <div class="evento">
+                                <span class="minuto amarilla">32'</span>
+                                <span class="jugador">Neyder</span>
+                                <span class="detalle">Falta dura</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto amarilla">71'</span>
+                                <span class="jugador">alejandro</span>
+                                <span class="detalle">Mano</span>
+                            </div>
+                        </div>
 
-                            <div class="seccion">
-                                <h3>Cuerpo Arbitral</h3>
-                                <div class="arbitro-item">
-                                    <span class="arbitro-rol">Árbitro Central:</span>
-                                    <span class="arbitro-nombre">${arbitros.central}</span>
-                                </div>
-                                <div class="arbitro-item">
-                                    <span class="arbitro-rol">Asistentes:</span>
-                                    <span class="arbitro-nombre">${arbitros.asistentes}</span>
-                                </div>
+                        <div class="seccion">
+                            <h3>Cuerpo Arbitral</h3>
+                            <div class="arbitro-item">
+                                <span class="arbitro-rol">Árbitro Central:</span>
+                                <span class="arbitro-nombre">Jorge Bautista</span>
+                            </div>
+                            <div class="arbitro-item">
+                                <span class="arbitro-rol">Asistentes:</span>
+                                <span class="arbitro-nombre">Jesús Cañón, Sebastián Alvarez, Kevin Cerpa</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            `;
-        }
+            </div>
 
-        // Cargar partidos iniciales
-        document.addEventListener('DOMContentLoaded', function() {
-            cargarPartidos('todos', 'todas');
-        });
-    </script>
+            <!-- PARTIDO 2 -->
+            <div class="partido">
+                <input type="checkbox" id="partido2" class="partido-checkbox">
+                <label for="partido2" class="partido-encabezado">
+                    <div class="partido-info">
+                        <span>Jornada 1</span>
+                        <span>12/09/2025</span>
+                    </div>
+                    <div class="equipos">
+                        <span class="equipo">Leones del Sur</span>
+                        <span class="resultado">2 - 2</span>
+                        <span class="equipo">Cóndores FC</span>
+                    </div>
+                    <span class="flecha">▼</span>
+                </label>
+                
+                <div class="partido-detalles">
+                    <div class="detalles-cuerpo">
+                        <div class="seccion">
+                            <h3>Estadísticas del Partido</h3>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Posesión de balón</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">50%</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">50%</span>
+                                </div>
+                            </div>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros totales</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">12</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">14</span>
+                                </div>
+                            </div>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros a puerta</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">5</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">6</span>
+                                </div>
+                            </div>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros de esquina</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">4</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">7</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion">
+                            <h3>Goles</h3>
+                            <div class="evento">
+                                <span class="minuto gol">18'</span>
+                                <span class="jugador">Carlos Rojas</span>
+                                <span class="detalle">Tiro exterior</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto gol">34'</span>
+                                <span class="jugador">Miguel Angel</span>
+                                <span class="detalle">(Cóndores FC)</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto gol">67'</span>
+                                <span class="jugador">Pedro Navarro</span>
+                                <span class="detalle">Penal</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto gol">89'</span>
+                                <span class="jugador">Javier López</span>
+                                <span class="detalle">(Cóndores FC)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion">
+                            <h3>Tarjetas</h3>
+                            <div class="evento">
+                                <span class="minuto amarilla">45'</span>
+                                <span class="jugador">Luis Mendoza</span>
+                                <span class="detalle">Falta</span>
+                            </div>
+                        </div>
+
+                        <div class="seccion">
+                            <h3>Cuerpo Arbitral</h3>
+                            <div class="arbitro-item">
+                                <span class="arbitro-rol">Árbitro Central:</span>
+                                <span class="arbitro-nombre">Jorge Bautista</span>
+                            </div>
+                            <div class="arbitro-item">
+                                <span class="arbitro-rol">Asistentes:</span>
+                                <span class="arbitro-nombre">Jesús Cañón, Sebastián Alvarez, Kevin Cerpa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTIDO 3 -->
+            <div class="partido">
+                <input type="checkbox" id="partido3" class="partido-checkbox">
+                <label for="partido3" class="partido-encabezado">
+                    <div class="partido-info">
+                        <span>Jornada 2</span>
+                        <span>19/09/2025</span>
+                    </div>
+                    <div class="equipos">
+                        <span class="equipo">Tigres FC</span>
+                        <span class="resultado">1 - 0</span>
+                        <span class="equipo">Leones del Sur</span>
+                    </div>
+                    <span class="flecha">▼</span>
+                </label>
+                
+                <div class="partido-detalles">
+                    <div class="detalles-cuerpo">
+                        <div class="seccion">
+                            <h3>Estadísticas del Partido</h3>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Posesión de balón</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">55%</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">45%</span>
+                                </div>
+                            </div>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros totales</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">14</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">9</span>
+                                </div>
+                            </div>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros a puerta</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">6</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">2</span>
+                                </div>
+                            </div>
+                            <div class="estadistica-item">
+                                <span class="estadistica-nombre">Tiros de esquina</span>
+                                <div class="estadistica-valores">
+                                    <span class="valor-local">6</span>
+                                    <span>-</span>
+                                    <span class="valor-visitante">3</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion">
+                            <h3>Goles</h3>
+                            <div class="evento">
+                                <span class="minuto gol">78'</span>
+                                <span class="jugador">Miguel Rodríguez</span>
+                                <span class="detalle">Cabezazo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion">
+                            <h3>Tarjetas</h3>
+                            <div class="evento">
+                                <span class="minuto amarilla">32'</span>
+                                <span class="jugador">Carlos López</span>
+                                <span class="detalle">Entrada dura</span>
+                            </div>
+                            <div class="evento">
+                                <span class="minuto amarilla">65'</span>
+                                <span class="jugador">Pedro Navarro</span>
+                                <span class="detalle">Mano</span>
+                            </div>
+                        </div>
+
+                        <div class="seccion">
+                            <h3>Cuerpo Arbitral</h3>
+                            <div class="arbitro-item">
+                                <span class="arbitro-rol">Árbitro Central:</span>
+                                <span class="arbitro-nombre">Jorge Bautista</span>
+                            </div>
+                            <div class="arbitro-item">
+                                <span class="arbitro-rol">Asistentes:</span>
+                                <span class="arbitro-nombre">Jesús Cañón, Sebastián Alvarez, Kevin Cerpa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </center>
+    
 
 </body>
 </html>
