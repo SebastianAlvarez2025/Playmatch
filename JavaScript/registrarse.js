@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             {ok: val.length >= 8, texto: "Mínimo 8 caracteres"},
             {ok: /[A-Z]/.test(val), texto: "Al menos una mayúscula"},
             {ok: /[a-z]/.test(val), texto: "Al menos una minúscula"},
-            {ok: /[!@#$%^&*(),.?\":{}|<>]/.test(val), texto: "Al menos un carácter especial"},
+            {ok: /[0-9]/.test(val), texto: "Al menos un número"},
+            {ok: /[¨!@#$%^&*(),.?\":{}|<>]/.test(val), texto: "Al menos un carácter especial"},
         ];
 
         reglas.forEach((regla, i) => {
