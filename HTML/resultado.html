@@ -11,22 +11,34 @@
 <body>
 
     
-        <header>
-            <div class="top-bar">
-                <div class="left-size">
-                        <img class="logo" src="../Images/Logo.png" alt="logo">
-                        <h1 class="titulo">Play Match</h1>
-                        
-                    <nav class ="menu">
-                        <a href="HTML/datosTorneo.html">Buscar Torneos</a>
-                        <a href="partidos.html">Partidos</a>
-                        <a href="equipos.html">Equipos</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
+    <header>
+      <div class="top-bar">
+        <div class="left-size">
+          <img src="../Images/Logo.png" alt="Logo" class="logo">
+          <h1 class="titulo">Play Match</h1>
+      
 
-    <main style="height: auto;">  
+          <nav class = "menu">
+            <a href="buscartorneos.html">Buscar Torneos</a>
+            <a href="partidos.html">Partidos</a>
+            <a href="equipos.html">Equipos</a>
+          </nav>
+        </div>
+
+
+        <div class="buttons-container">      
+          <section class="sigin">
+              <button type="button" onclick="location.href='registrarse.html'">Registrarse</button>
+          </section>
+
+          <section class="login">
+              <button type="button" onclick="location.href='ingreso.html'">Inicio de sesion</button>
+          </section>
+          
+        </div>
+
+    </header>
+ 
         <div class="filtros">
           
             <select>
@@ -350,8 +362,7 @@
                 </div>
             </div>
         </div>
-        </center>
-    </main> 
+        </center> 
     
 
 </body>
