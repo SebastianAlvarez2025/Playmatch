@@ -1,73 +1,30 @@
-body {
-background: url('../Images/Fondo.jpg') no-repeat center center fixed;
-background-size: cover;
-}
 
-.espacio{
-  height: 60px;
-}
-
-header {
-  background: url('../Images/Fondo.jpg') no-repeat center center fixed;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  z-index: 1000;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.79);
-  padding: 10px;
-}
-
-.logo{
-  width: 50px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.top-bar{
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-size{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.left-size .titulo {
-  margin-top: 0.5px;
-}
-
-.menu {
-  display: inline-flex;
-  width: auto;
-  flex: 0 0 auto;
-  background: white; 
-  border: 1px solid black;
-  padding: 8px 12px;
-  border-radius: 5px;
-  gap: 20px;
-  white-space: nowrap;
-}
 
 .g{
-    background-color: green;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(2, 250, 2);
+    border: 1px solid white;
+    border-radius: 30px;
 }
 
 .e{
-    background-color: yellow;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(104, 104, 103);
+    border: 1px solid white;
+    border-radius: 30px;
 }
 
 .p{
+    width: 30px;
+    height: 30px;
     background-color: red;
+    border: 1px solid white;
+    border-radius: 30px;
 }
 
-table {
+.tabla {
     border: 1.5px solid black;
     border-radius: 8px;
     background-color: white;
@@ -81,8 +38,8 @@ table {
     box-shadow: 0 6px 18px rgba(0,0,0,0.12); 
   
     }
-    td {
-      border: 1px solid #333;
+    tr {
+      border: 1px solid rgba(0,0,0,0.12);
       padding: 5px;
     }
     .efecto {
@@ -90,19 +47,24 @@ table {
       transition: background 0.3s;
     }
     th {
-        color:black;
-        background-color: blueviolet;
+        color:rgb(255, 255, 255);
+        background-color: rgb(120, 120, 120);
     }
+
     .efecto:hover {
       background-color: green;
       color: black;
     }
 
     .posicion{
-      background-color: blue;
+      background-color:rgb(120, 120, 120);
     }
 
     .t{
       background: red;
       border-radius: 8px;
+    }
+
+    .enfre{
+      text-align: center;
     }
