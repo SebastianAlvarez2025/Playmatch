@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+            <link rel="stylesheet" href="../CSS/stylesRegistrarse.css">
+    </head>
+    <body>
+        <header>
+            <div class = "Contenedor-General">
+                <img src="../Images/Logo.png" alt="Logo" class="logo">
+                <h1 class="titulo">Play Match</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="Contenedor-Registro">
+
+                <h1>Crea tu cuenta</h1>
+                <p class="subtexto">O <a href="../HTML/ingreso.html">inicia sesión</a> en tu cuenta</p>
+
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Confirmar contraseña" required>
+
+                <div class="condiciones">
+                    <p>Al menos 8 caracteres</p>
+                    <p>Una letra mayúscula</p>
+                    <p>Una letra minúscula</p>
+                    <p>Un carácter especial (@$!%*?&...)</p>
+                </div>
+
+                <button type="submit" class="boton-continuar">Crear cuenta</button>
+            </div>
+        </main>
+
+        <script src="../JavaScript/registrarse.js"></script>
+    </body>
+</html>
