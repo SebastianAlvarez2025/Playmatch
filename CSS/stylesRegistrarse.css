@@ -99,3 +99,7 @@ header {
     margin-top: 0.5;
 
 }
+
+.Contenedor-Registro .boton-continuar:hover{
+    background: #0056b3;
+}
