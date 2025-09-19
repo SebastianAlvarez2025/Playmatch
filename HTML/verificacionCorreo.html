@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+            <link rel="stylesheet" href="../CSS/verificacionCorreo.css">
+    </head>
+    <body>
+        <header>
+            <div class = "Contenedor-General">
+                <img src="../Images/Logo.png" alt="Logo" class="logo">
+                <h1 class="titulo">Play Match</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="Contenedor-Verificacion">
+                <h1>Verifica tú correo</h1>
+                <p id="mensaje-verificacion">
+                    Se envió un código al correo <span id="correo-mostrado"></span>, ingreselo acá para continuar
+                </p>
+                <input type="text" id="codigo" placeholder="Ingresa el código">
+                <button id="boton-continuar">Continuar</button>
+                <a href="#" id="reenviar">Reenviar código</a>
+                <a href="registrarse.html" id="modificar">Modificar correo</a>
+
+            </div>
+            
+        </main>
+
+        <script src="../JavaScript/verificacionCorreo.js"></script>
+    </body>
+</html>
