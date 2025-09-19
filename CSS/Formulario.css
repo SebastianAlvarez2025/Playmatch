@@ -8,7 +8,7 @@
 
 /* Fondo tipo estadio */
 body {
-  background: url("imagenes/Fondo.jpg") no-repeat center center fixed;
+  background: url("../Images/Fondo.jpg") no-repeat center center fixed;
   background-size: cover;
   padding: 20px;
 }
@@ -22,6 +22,15 @@ body {
   border-radius: 6px;
   margin-bottom: 30px;
 }
+
+.titulo{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.79);
+  padding: 1rem;
+  
+}
+
 .logo {
   font-size: 50x;
   font-weight: bold;
