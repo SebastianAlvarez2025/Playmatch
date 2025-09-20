@@ -252,42 +252,5 @@
   margin-top: 0.8rem;
 }
 
-.contenedor-botones {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-end; 
-  margin: 20px; 
-}
-
-.fila-superior button{
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  border: 1px solid #000000;
-  
-}
-.fila-superior :hover{
-  background: rgb(255,174,1);
-  transform: scale(1.1); 
-}
-.fila-inferior {
-  margin-top: 10px; 
-}
-
-.cerrar {
-  background-color: rgb(197, 69, 69);
-  border: 1px solid #000000  ;
-  border-radius: 4px;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  padding: 8px 12px;
-}
-
 
 

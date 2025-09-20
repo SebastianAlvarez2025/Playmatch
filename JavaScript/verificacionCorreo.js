@@ -14,7 +14,7 @@ botonContinuar.addEventListener("click", () =>{
         alert("Por favor ingresa el código de verificación.");
     }
     else {
-        alert("Código ingresado: " + codigo);
+        window.location.href="../HTML/ingreso.html";
     }
 });
 

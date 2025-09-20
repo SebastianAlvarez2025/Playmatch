@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLAY MATCH</title>
-          <link rel="icon" type="imagen/jpg" href="Images/Logo.png">
-          <link rel="stylesheet" href="../CSS/global.css">
+          <link rel="icon" type="imagen/jpg" href="../Images/Logo.png">
+          <link rel="stylesheet" href="../CSS/globalUsuario.css">
           <link rel="stylesheet" href="../CSS/principalAficionado.css">
   </head>
   <body>
@@ -18,25 +18,30 @@
         
 
             <nav class = "menu"> 
-              <a href="BuscarTorneoVis.html">Buscar Torneos</a>
-              <a href="partidos.html">Partidos</a>
+              <a href="HTML/BuscarTorneoVis.html">Buscar Torneos</a>
+              <a href="HTML/partidos.html">Partidos</a>
               <a href="equipos.html">Equipos</a>
             </nav>
           </div>
 
 
-          <div class="contenedor-botones">
-             <div class="fila-superior">
-                <button type="button" onclick="location.href='tiporol.html'">Cambiar rol</button>
-                <button type="button" onclick="location.href='configuraciones.html'">Bienvenido, Pepe</button>
-             </div>      
+          <div class="buttons-container">      
+            <section class="seleccionar">
+                <button type="button" onclick="location.href='seleccionarRol.html'">Seleccionar rol</button>
+            </section>
 
-            <div class="fila-inferior">
-              <button class="cerrar" onclick="location.href='index.html'">Cerrar Sesion</button>
-            
+            <div class="menu-usuario">
+                <button class="boton-usuario">
+                    <img src="../Images/silueta.png" alt="Usuario" class="imagen-usuario">
+                </button>
+                <div class="menu-desplegable">
+                    <a href="opcionesDeUsuario.html">Opciones de Usuario</a>
+                    <div class="separador"></div>
+                    <a href="cerrarSesion.html" class="cerrarSesion">Cerrar sesión</a>
+                </div>
             </div>
+            
           </div>
-
         </div>
       </header>
 
@@ -66,7 +71,7 @@
             <div class = "textotorneo2">
               <h3>Copa Fifas</h3>
               <p>Código: 1738433</p>
-              
+                
             </div>
             <a href="#" class="torneo2-boton">Ver información</a>
           </article>
@@ -87,6 +92,10 @@
       </section>
     </main>
 
-    <script src="JavaScript/app.js"></script>
+    <script src="../JavaScript/usuarioBoton.js"></script>
   </body>
 </html>
+
+
+
+
