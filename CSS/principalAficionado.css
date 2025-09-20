@@ -252,58 +252,5 @@
   margin-top: 0.8rem;
 }
 
-.menu-usuario{
-    position: relative;
-    display: inline-block;
-}
 
-.boton-usuario{
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.imagen-usuario{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.menu-desplegable{
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 1000;
-    min-width: 180px;
-    white-space: nowrap;
-}
-
-
-.menu-desplegable a{
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-}
-
-.menu-desplegable a:hover{
-    background-color: #f0f0f0;
-}
-
-.menu-desplegable .separador{
-    height: 1px;
-    background: #ddd;
-    font-weight: bold;
-}
-
-.menu-desplegable .cerrarSesion{
-    color: red;
-    font-weight: bold;
-}
 
