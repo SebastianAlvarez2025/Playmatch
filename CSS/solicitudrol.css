@@ -1,109 +1,88 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url("imagenes/Fondo.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px; /* subí un poco el padding para bajar logo y título */
-}
-
-.logo-container {
+.usuario {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 10px; /* baja un poco logo y título */
 }
 
-.logo {
-  width: 45px;
-  height: 40px;
+.usuario span {
+  font-size: 14px;
+  color: #333;
 }
 
-/* Fuente y estilo del título */
-.titulo {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 32px;
-  font-weight: bold;
-  color: rgb(228, 228, 228);
-}
-
-/* Botón cerrar sesión */
-.cerrar {
-  padding: 7px 15px;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  background-color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.cerrar:hover {
-  background-color: orange;
-  color: white;
-}
-
-/* Caja de confirmación */
-.confirmation-box {
-  max-width: 700px;
-  margin: 100px auto;
-  background-color: white;
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.icono {
-  font-size: 40px;
-  color: green;
-  margin-bottom: 20px;
-}
-
-.confirmation-message h2 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.confirmation-message p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.highlight {
-  color: green;
-  font-weight: bold;
-}
-
-/* Botón confirmar */
-.btn-container {
-  margin-top: 20px;
-}
-
-.btn-confirm {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 25px;
+.btn-salir {
+  background: #f8f8f8;
+  color: #000000;
   border: none;
-  border-radius: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s;
+  font-size: 13px;
 }
 
-.btn-confirm:hover {
-  background-color: #218838; 
-  transform: scale(1.05);   
+.btn-salir:hover {
+  background: #eb9627;
+}
+
+/* Contenedor del formulario */
+.contenedor {
+  background: #fff;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* Campos del formulario */
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input, 
+form select, 
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+/* Botones */
+.acciones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-enviar {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background: #2563eb;
+}
+
+.btn-reset {
+  background: none;
+  border: none;
+  color: #1d4ed8;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
 }
