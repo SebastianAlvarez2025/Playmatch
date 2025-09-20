@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () =>{
         let coincide = true;
         if (confirmPassword){
             coincide = val === confirmPassword.value && val.length > 0;
-            const icono = regla.ok ? "✓" : "✕";
-            const color = regla.ok ? "green" : "red";
+            const icono = coincide ? "✓" : "✕";
+            const color = coincide ? "green" : "red";
 
             if (!condiciones.querySelector(".match")){
                 const p = document.createElement("p");
@@ -52,4 +52,20 @@ document.addEventListener("DOMContentLoaded", () =>{
     if (confirmPassword) confirmPassword.addEventListener("input", validar);
 
     validar();
+
+
+    const inputCorreo = document.querySelector('input[type="email"]');
+
+    boton.addEventListener("click", () => {
+        const correo = inputCorreo.value.trim();
+
+        if(correo){
+            localStorage.setItem("correoUsuario", correo);
+            window.location.href="../HTML/verificacionCorreo.html";
+        }
+        else{
+            alert("Por favor ingresa un correo valido");
+        }
+        
+    });
 });
