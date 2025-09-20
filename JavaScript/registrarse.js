@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         if(correo){
             localStorage.setItem("correoUsuario", correo);
-            window.location.href="verificacionCorreo.html";
+            window.location.href="../HTML/verificacionCorreo.html";
         }
         else{
             alert("Por favor ingresa un correo valido");

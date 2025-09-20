@@ -252,42 +252,58 @@
   margin-top: 0.8rem;
 }
 
-.contenedor-botones {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-end; 
-  margin: 20px; 
+.menu-usuario{
+    position: relative;
+    display: inline-block;
 }
 
-.fila-superior button{
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  border: 1px solid #000000;
-  
-}
-.fila-superior :hover{
-  background: rgb(255,174,1);
-  transform: scale(1.1); 
-}
-.fila-inferior {
-  margin-top: 10px; 
+.boton-usuario{
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.cerrar {
-  background-color: rgb(197, 69, 69);
-  border: 1px solid #000000  ;
-  border-radius: 4px;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  padding: 8px 12px;
+.imagen-usuario{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.menu-desplegable{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+    min-width: 180px;
+    white-space: nowrap;
 }
 
 
+.menu-desplegable a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.menu-desplegable a:hover{
+    background-color: #f0f0f0;
+}
+
+.menu-desplegable .separador{
+    height: 1px;
+    background: #ddd;
+    font-weight: bold;
+}
+
+.menu-desplegable .cerrarSesion{
+    color: red;
+    font-weight: bold;
+}
 
