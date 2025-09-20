@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLAY MATCH</title>
           <link rel="icon" type="imagen/jpg" href="../Images/Logo.png">
-          <link rel="stylesheet" href="../CSS/global.css">
+          <link rel="stylesheet" href="../CSS/globalUsuario.css">
           <link rel="stylesheet" href="../CSS/seleccionarRol.css">
   </head>
   <body>
@@ -18,7 +18,7 @@
         
 
             <nav class = "menu"> 
-              <a href="HTML/BuscarTorneoVis.html">Buscar Torneos</a>
+              <a href="HTML/BuscarTorneoVis.html">Principal/Torneos</a>
               <a href="HTML/partidos.html">Partidos</a>
               <a href="equipos.html">Equipos</a>
             </nav>
@@ -26,9 +26,6 @@
 
 
           <div class="buttons-container">      
-            <section class="sigin">
-                <button type="button" onclick="location.href='HTML/registrarse.html'">Registrarse</button>
-            </section>
 
             <div class="menu-usuario">
                 <button class="boton-usuario">
@@ -46,7 +43,13 @@
       </header>
 
     <main>
-      
+      <div class="Contenedor-Roles">
+        <h1>Selecciona tú rol</h1>
+        <p>Seleccione:</p>
+
+        <button class="boton-seleccionado" onclick="location.href='principalAficionado.html'">Aficionado</button>
+        <button class="boton-normal" onclick="location.href='solicitudRol.html'">Solicitar roles</button>
+      </div>
     </main>
 
     <script src="../JavaScript/usuarioBoton.js"></script>
