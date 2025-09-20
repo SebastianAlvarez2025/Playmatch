@@ -68,3 +68,43 @@
     .enfre{
       text-align: center;
     }
+
+    .bottones-tabla{
+      position: center;
+    }
+    .botton{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    } 
+
+    .bottones{
+    background: white;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    }
+
+    .bottones:hover{
+    background: white;
+    transform: scale(1.1); 
+    }
+
+    .filtro{
+    margin:10px;
+    margin-left: 345px;
+    background: white;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    }
+
+    .filtro:hover{
+    background: white;
+    transform: scale(1.1); 
+    }
+
