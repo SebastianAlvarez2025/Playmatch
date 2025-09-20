@@ -2,7 +2,7 @@ const botonContinuar = document.querySelector(".boton-continuar");
 const emailInput = document.querySelector("input[type='email']");
 const passInput = document.querySelector("input[type='password']");
 
-const usuarioValido = "playmatch@gmail.com";
+const usuarioValido = "aficionado@gmail.com";
 const passwordValido = "123456789";
 
 if (sessionStorage.getItem("logged") === "true") {
