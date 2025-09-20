@@ -6,29 +6,23 @@
   <title>PLAY MATCH</title>
   <link rel="stylesheet" href="../CSS/Formulario.css">
   <link rel="icon" type="imagen/jpg" href="../Images/Logo.png">
-    <link rel="stylesheet" href="../CSS/global.css">
+  <link rel="stylesheet" href="../CSS/global.css">
 </head>
 <body>
   <!-- Barra superior -->
-  <header>
-      <div class="top-bar">
-        <div class="left-size">
-          <img src="../Images/Logo.png" alt="Logo" class="logo">
-          <h1 class="titulo">PLAY MATCH</h1>
-      
+  <header class="barra">
+    <div class="logo-container">
+      <img src="../Images/Logo.png" alt="Logo" class="logo">
+      <h1 class="titulo">Play match</h1>
+    </div>
 
-        </div>
+    <div class="buttons-container">      
+      <section class="login">
+        <button type="button" class="btn-salir" onclick="location.href='ingreso.html'">Cerrar sesión</button>
+      </section>
+    </div>
+  </header>
 
-
-        <div class="buttons-container">      
-        
-          <section class="login">
-              <button type="button" onclick="location.href='ingreso.html'">cerrar sesion </button>
-          </section>
-          
-        </div>
-
-    </header>
   <!-- Contenedor principal -->
   <div class="contenedor">
     <h1>Formulario para solicitar Rol</h1>
@@ -58,7 +52,6 @@
         <option value="arbitro">Árbitro</option>
         <option value="jugador">Jugador</option>
         <option value="entrenador">Entrenador</option>
-        
       </select>
 
       <!-- Justificación -->

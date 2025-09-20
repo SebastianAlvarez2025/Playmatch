@@ -18,59 +18,54 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  border-radius: 6px;
-  margin-bottom: 30px;
+  padding: 15px 40px;
 }
 
-.titulo{
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.79);
-  padding: 1rem;
-  
+/* Logo y título */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px; /* baja el bloque de logo + título */
 }
 
 .logo {
-  font-size: 50x;
-  font-weight: bold;
-  color: #0f172a;
-  width: 5%;            
+  width: 40px;   /* un poco más grande */
   height: auto;
-  vertical-align: middle; 
-  background: transparent;
 }
 
-.usuario {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.titulo {
+  font-family: 'Courier New', Courier, monospace; 
+  font-size: 38px; /* más grande */
+  font-weight: bold;
+  color: rgb(230, 227, 227); /* gris claro */
+  
 }
 
-.usuario span {
-  font-size: 14px;
-  color: #333;
-}
-
+/* Botón cerrar sesión */
 .btn-salir {
   background: #f8f8f8;
   color: #000000;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 7px 15px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
 }
 
 .btn-salir:hover {
-  background: #eb9627;
+  background-color: orange;
+  color: white;
+  transform: scale(1.05);
 }
 
 /* Contenedor del formulario */
 .contenedor {
   background: #fff;
   max-width: 700px;
-  margin: auto;
+  margin: 40px auto;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -80,6 +75,7 @@ h1 {
   margin-bottom: 20px;
   font-size: 24px;
   color: #222;
+  text-align: center;
 }
 
 /* Campos del formulario */
@@ -104,7 +100,7 @@ form textarea {
   resize: vertical;
 }
 
-/* Botones */
+/* Botones formulario */
 .acciones {
   margin-top: 20px;
   display: flex;
@@ -119,10 +115,12 @@ form textarea {
   border-radius: 4px;
   font-size: 15px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-enviar:hover {
   background: #2563eb;
+  transform: scale(1.05);
 }
 
 .btn-reset {
