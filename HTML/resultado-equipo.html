@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PLAY MATCH</title>
+    <link rel="icon" type="imagen/jpg" href="../Images/Logo.png">
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/resultado-equipo.css">
+</head>
+
+<body> 
+    <header>
+      <div class="top-bar">
+
+        <div class="left-size">
+          <img src="../Images/Logo.png" alt="Logo" class="logo">
+          <h1 class="titulo">Play Match</h1>
+      
+          <nav class = "menu">
+            <a href="buscartorneos.html">Buscar Torneos</a>
+            <a href="partidos.html">Partidos</a>
+            <a href="equipos.html">Equipos</a>
+          </nav>
+        </div>
+
+        <div class="buttons-container">      
+          <section class="sigin">
+              <button type="button" onclick="location.href='registrarse.html'">Registrarse</button>
+          </section>
+
+          <section class="login">
+              <button type="button" onclick="location.href='ingreso.html'">Inicio de sesion</button>
+          </section>
+          
+        </div>
+      </div>
+    </header>
+
+    <center>
+    <div class="caja">
+        <div class="bottones-tabla">
+
+            <span class="equipo">               
+                <table>
+                    <tr>
+                        <td>
+                            <img class="escudo" src="../Images/eq1.png">
+                        </td>
+                        <td>
+                            <span>Real Madrid</span>
+                        </td>
+                    </tr>
+                </table>           
+            </span>
+
+            <span class="botton">           
+                <button class="bottones" type="button" onclick="location.href='tabla-posiciones.html'">CLASIFICACION</button>
+                <button class="bottones" type="button" onclick="location.href='Equipo.html'">PLANTILLA</button>
+                <button class="bottones">RESULTADO</button>
+                <button class="bottones">PARTIDOS</button>
+            </span>        
+        </div>
+
+        <div class="plantilla">
+            <select class="jornada">
+                <option>Jornada 1</option>
+                <option>Jornada 2</option>
+            </select>
+            <center>
+                <div class="partidos-lista">
+                    <!-- PARTIDO 1 -->
+                    <div class="partido">
+                        <input type="checkbox" id="partido1" class="partido-checkbox">
+                        <label for="partido1" class="partido-encabezado">
+                            <div class="partido-info">
+                                <p>12/09/2025</p>
+                            </div>
+                            <div class="equipos">
+                                <span class="equipo">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img class="escudo-vs" src="../Images/eq1.png">
+                                            </td>
+                                            <td>
+                                                <span>Real Madrid</span>
+                                            </td>
+                                        </tr>
+                                     </table>
+                                </span>
+                                <span class="resultado">3 - 1</span>
+                                <span class="equipo">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span>Barcelona</span>
+                                            </td>
+                                            <td>
+                                                <img class="escudo-vs" src="../Images/eq2.png">
+                                            </td>
+                                        </tr>
+                                     </table>
+                                </span>
+                            </div>
+                            <span class="flecha">▼</span>
+                        </label>
+                        
+                        <div class="partido-detalles">
+                            <div class="detalles-cuerpo">
+                                <div class="seccion">
+                                    <h3>Estadísticas del Partido</h3>
+                                    <div class="estadistica-item">
+                                        <span class="estadistica-nombre">Posesión de balón</span>
+                                        <div class="estadistica-valores">
+                                            <span class="valor-local">60%</span>
+                                            <span>-</span>
+                                            <span class="valor-visitante">40%</span>
+                                        </div>
+                                    </div>
+                                    <div class="estadistica-item">
+                                        <span class="estadistica-nombre">Tiros totales</span>
+                                        <div class="estadistica-valores">
+                                            <span class="valor-local">15</span>
+                                            <span>-</span>
+                                            <span class="valor-visitante">8</span>
+                                        </div>
+                                    </div>
+                                    <div class="estadistica-item">
+                                        <span class="estadistica-nombre">Tiros a puerta</span>
+                                        <div class="estadistica-valores">
+                                            <span class="valor-local">7</span>
+                                            <span>-</span>
+                                            <span class="valor-visitante">3</span>
+                                        </div>
+                                    </div>
+                                    <div class="estadistica-item">
+                                        <span class="estadistica-nombre">Tiros de esquina</span>
+                                        <div class="estadistica-valores">
+                                            <span class="valor-local">5</span>
+                                            <span>-</span>
+                                            <span class="valor-visitante">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="seccion">
+                                    <h3>Goles</h3>
+                                    <div class="evento">
+                                        <span class="minuto gol">25'</span>
+                                        <span class="jugador">Juan cruz</span>
+                                        <span class="detalle">Asistencia: Carlos López</span>
+                                    </div>
+                                    <div class="evento">
+                                        <span class="minuto gol">52'</span>
+                                        <span class="jugador">diver</span>
+                                        <span class="detalle">Penal</span>
+                                    </div>
+                                    <div class="evento">
+                                        <span class="minuto gol">67'</span>
+                                        <span class="jugador">andres</span>
+                                        <span class="detalle">Tiro libre</span>
+                                    </div>
+                                    <div class="evento">
+                                        <span class="minuto gol">89'</span>
+                                        <span class="jugador">Andrés cruz</span>
+                                        <span class="detalle">(Águilas Doradas)</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="seccion">
+                                    <h3>Tarjetas</h3>
+                                    <div class="evento">
+                                        <span class="minuto amarilla">32'</span>
+                                        <span class="jugador">Neyder</span>
+                                        <span class="detalle">Falta dura</span>
+                                    </div>
+                                    <div class="evento">
+                                        <span class="minuto amarilla">71'</span>
+                                        <span class="jugador">alejandro</span>
+                                        <span class="detalle">Mano</span>
+                                    </div>
+                                </div>
+
+                                <div class="seccion">
+                                    <h3>Cuerpo Arbitral</h3>
+                                    <div class="arbitro-item">
+                                        <span class="arbitro-rol">Árbitro Central:</span>
+                                        <span class="arbitro-nombre">Jorge Bautista</span>
+                                    </div>
+                                    <div class="arbitro-item">
+                                        <span class="arbitro-rol">Asistentes:</span>
+                                        <span class="arbitro-nombre">Jesús Cañón, Sebastián Alvarez, Kevin Cerpa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center> 
+        </div>
+    </div>
+    </center>
+    
+
+    
+
+    
+
+    
+</body>
+</html>
