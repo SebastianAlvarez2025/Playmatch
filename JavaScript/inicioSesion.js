@@ -2,11 +2,23 @@ const botonContinuar = document.querySelector(".boton-continuar");
 const emailInput = document.querySelector("input[type='email']");
 const passInput = document.querySelector("input[type='password']");
 
-const usuarioValido = "aficionado@gmail.com";
-const passwordValido = "123456789";
+const usuarios = {
+    "aficionado@gmail.com":{
+        password: "123456789",
+        redirect: "../HTML/principalAficionado.html"
+    },
+
+    "jugador@gmail.com":{
+        password: "123456789",
+        redirect: "../HTML/principalJugador.html"
+    }
+};
 
 if (sessionStorage.getItem("logged") === "true") {
-    window.location.replace("../HTML/principalAficionado.html");
+    const rolUsuario = sessionStorage.getItem("rolUsuario");
+    if(rolUsuario && usuarios[rolUsuario]){
+        window.location.replace(usuarios[rolUsuario].redirect)
+    }
   }
 
 botonContinuar.addEventListener("click", function(event){
@@ -22,14 +34,20 @@ botonContinuar.addEventListener("click", function(event){
         return;
     }
 
-    if (email === usuarioValido && password === passwordValido){
+    if (!regexEmail.test(email)){
+        alert("Ingrese un correo válido.");
+        return;
+    }
+
+    if (usuarios[email] && usuarios[email].password === password){
         alert ("Inicio de sesión exitoso.");
         sessionStorage.setItem("logged", "true");
-        window.location.href = "../HTML/principalAficionado.html";
+        sessionStorage.setItem("rolUsuario", email);
+        window.location.href = usuarios[email].redirect;
     } else {
         alert("Correo o contraseña incorrectos.");
         emailInput.value = "";
         passInput.value = "";
         emailInput.focus()
     }
-})
+});

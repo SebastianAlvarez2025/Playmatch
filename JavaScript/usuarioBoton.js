@@ -1,6 +1,7 @@
 document.addEventListener ("DOMContentLoaded", () =>{
     const botonUsuario = document.querySelector(".boton-usuario");
     const menuDesplegable = document.querySelector(".menu-desplegable");
+    const cerrarSesionLink = document.querySelector(".cerrarSesion");
 
     botonUsuario.addEventListener("click", () =>{
         menuDesplegable.style.display = menuDesplegable.style.display === "block" ? "none" : "block";
@@ -11,4 +12,14 @@ document.addEventListener ("DOMContentLoaded", () =>{
             menuDesplegable.style.display = "none";
         }
     });
+
+    if (cerrarSesionLink){
+        cerrarSesionLink.addEventListener("click", (e) =>{
+            e.preventDefault();
+            sessionStorage.removeItem("logged");
+            sessionStorage.removeItem("rolUsuario");
+            window.location.href="../index.html";
+        });
+    }
+
 });
