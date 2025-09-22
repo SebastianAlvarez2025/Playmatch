@@ -18,7 +18,7 @@ document.addEventListener ("DOMContentLoaded", () =>{
             e.preventDefault();
             sessionStorage.removeItem("logged");
             sessionStorage.removeItem("rolUsuario");
-            window.location.href="../index.html";
+            window.location.href="../../index.html";
         });
     }
 

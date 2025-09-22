@@ -8,7 +8,7 @@ main{
 
 body {
 
-    background: url("../Images/Fondo.jpg") no-repeat center center fixed;
+    background: url("../../Images/Fondo.jpg") no-repeat center center fixed;
     background-size: cover;   
 }
 
