@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLAY MATCH</title>
+  <link rel="icon" type="imagen/jpg" href="../Images/Logo.png">
+  <link rel="stylesheet" href="../CSS/globalUsuario.css">
+  <link rel="stylesheet" href="../CSS/solicitudRolJugador.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header>
+    <div class="top-bar">
+          <div class="left-size">
+            <img src="../Images/Logo.png" alt="Logo" class="logo">
+            <h1 class="titulo">Play Match</h1>
+
+            <nav class = "menu"> 
+              <a href="principalJugador.html">Principal/Torneos</a>
+              <a href="partidosJugador.html">Partidos</a>
+              <a href="buscarEquiposJugador.html">Equipos</a>
+              <a href="seleccionarRolJugador.html">Atras</a>
+            </nav>
+          </div>
+
+
+          <div class="buttons-container">      
+
+            <div class="menu-usuario">
+                <button class="boton-usuario">
+                    <img src="../Images/silueta.png" alt="Usuario" class="imagen-usuario">
+                </button>
+                <div class="menu-desplegable">
+                    <a href="opcionesDeUsuario.html">Opciones de Usuario</a>
+                    <div class="separador"></div>
+                    <a href="cerrarSesion.html" class="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+  </header>
+  <!-- Contenedor principal -->
+  <div class="contenedor">
+    <h1>Formulario para solicitar Rol</h1>
+    <form>
+      <!-- Nombre -->
+      <label for="nombre">Nombre y apellido: *</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+      <!-- Tipo documento -->
+      <label for="tipoDoc">Tipo de Documento: *</label>
+      <select id="tipoDoc" name="tipoDoc" required>
+        <option value="">Seleccione...</option>
+        <option value="cc">Cédula de Ciudadanía</option>
+        <option value="ti">Tarjeta de Identidad</option>
+        <option value="ce">Cédula de Extranjería</option>
+      </select>
+
+      <!-- Número documento -->
+      <label for="numDoc">N. Documento: *</label>
+      <input type="number" id="numDoc" name="numDoc" placeholder="Ej: 1021672353" required>
+
+      <!-- Rol -->
+      <label for="rol">Rol a solicitar: *</label>
+      <select id="rol" name="rol" required>
+        <option value="">Seleccione...</option>
+        <option value="organizador">Organizador</option>
+        <option value="arbitro">Árbitro</option>
+        <option value="jugador">Jugador</option>
+        <option value="entrenador">Entrenador</option>
+        
+      </select>
+
+      <!-- Justificación -->
+      <label for="justificacion">Justificación de rol y experiencia: *</label>
+      <textarea id="justificacion" name="justificacion" rows="5" placeholder="Escribe tu experiencia..." required></textarea>
+
+      <!-- Botones -->
+      <div class="acciones">
+        <button class="btn-enviar" onclick="location.href='confirmacionSolicitudRolJugad.html'">Solicitar rol</button>
+        <button type="reset" class="btn-reset">Reset Form</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../JavaScript/usuarioBoton.js"></script>
+</body>
+</html>
