@@ -5,12 +5,12 @@ const passInput = document.querySelector("input[type='password']");
 const usuarios = {
     "aficionado@gmail.com":{
         password: "123456789",
-        redirect: "../HTML/principalAficionado.html"
+        redirect: "../../HTML/Aficionado/principalAficionado.html"
     },
 
     "jugador@gmail.com":{
         password: "123456789",
-        redirect: "../HTML/principalJugador.html"
+        redirect: "../../HTML/Jugador/principalJugador.html"
     }
 };
 
