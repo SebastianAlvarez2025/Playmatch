@@ -1,7 +1,7 @@
 .rectangulo{
   position: relative;
-  width: 1150px;              
-  min-height: 550px;        
+  width: 125vh ;              
+  height: 60vh;        
   background-color: #fff;    
   border: 1px solid #000;    
   padding: 20px;             
