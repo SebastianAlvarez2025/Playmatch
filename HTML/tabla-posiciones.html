@@ -39,28 +39,35 @@
 
     </header>
 
-    
-    <div class="bottones-tabla">
-        
-                <span>
-                    <select class="filtro">
-                        <option>Todos los torneos</option>
-                        <option>Copa Trinche</option>
-                        <option>Copa Revancha</option>
-                        <option>Copa Las Divas</option>
-                    </select>
-                </span>
-                <span class="botton">
-                        <button class="bottones">CLASIFICACION</button>
-                        <button class="bottones">PARTIDOS</button>
-                        <button class="bottones" type="button" onclick="location.href='resultado.html'">RESULTADO</button>
-                        <button class="bottones">ANOTADORES</button>
-                        <button class="bottones">NOTIFICACIONES</button>
-                </span>        
-    </div>
+<center>
+    <div class="caja">
+        <div class="bottones-tabla">
+
+            <span class="torneo">               
+                <table>
+                    <tr>
+                        <td>
+                            <img class="imagen-torneo" src="../Images/torneo1.jpg">
+                        </td>
+                        <td>
+                            <span>NOMBRE DEL TORNEO</span>
+                        </td>
+                    </tr>
+                </table>
+            </span>
+
+            <span class="botton">
+                <button class="bottones" type="button" onclick="location.href='tabla-posiciones.html'">CLASIFICACION</button>
+                <button class="bottones" type="button" onclick="location.href='partido-torneo.html'">PARTIDOS</button>
+                <button class="bottones" type="button" onclick="location.href='resultado-torneo.html'">RESULTADO</button>
+                <button class="bottones">ANOTADORES</button>
+                <button class="bottones">NOTIFICACIONES</button>
+            </span>        
+        </div>
+
     
 
-    <center>
+        <center>
             <table class="tabla">
                 <tr>
                     <th>#</th><th>ESCUDO</th><th>NOMBRE</th><th>PTS</th>
@@ -141,13 +148,11 @@
                         <center>
                             <table class="enfre">
                                 <tr>
-                                    
                                     <td class="g">g</td>
                                     <td class="e">e</td>
                                     <td class="g">g</td>
                                     <td class="g">g</td>
-                                    <td class="p">p</td>
-                                    
+                                    <td class="p">p</td>                                   
                                 </tr>
                             </table>
                         </center>
@@ -155,10 +160,9 @@
                 </tr>
 
             </table>
-    </center>
-
-    
-
-    
+        </center>
+    </div>
+</center>
+   
 </body>
 </html>

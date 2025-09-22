@@ -155,7 +155,7 @@
 
 /* Cuando el checkbox está checked, mostrar detalles */
 .partido-checkbox:checked ~ .partido-detalles {
-    max-height: 2000px;
+    max-height: 2000px;  /*el alto del despliegue de la informacion del resultado*/
 }
 
 /* Rotar flecha cuando está expandido */
@@ -164,11 +164,9 @@
 }
 
 .detalles-cuerpo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 20px;
-}
+    padding: 10px;
+} 
 
 /* SECCIONES */
 .seccion {
@@ -179,77 +177,75 @@
 }
 
 .seccion h3 {
-    margin-bottom: 15px;
-    color: #2c3e50;
-    border-bottom: 1px solid #2ecc71;
-    padding-bottom: 8px;
+    background: rgba(0,0,0,0.30);
+    margin: -10px 0 2px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+}
+
+.detalle-equipo{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*pone los cuadros en la misma linea*/
+    gap: 10px;
+    padding: 10px;
 }
 
 /* ESTADÍSTICAS */
 .estadistica-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
+    /* display: flex;      coloca los elementos hijos
+    justify-content: space-between;    hijo 1 izquierda, 2 centro, 3 derecha*/
     padding: 10px;
     background: #f8f9fa;
     border-radius: 5px;
 }
 
 .estadistica-nombre {
+    text-align: center;
     font-weight: 600;
 }
 
-.estadistica-valores {
+.estadistica-local {
     display: flex;
+    justify-content: left;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
 }
 
-.valor-local, .valor-visitante {
-    font-weight: bold;
-    padding: 3px 8px;
-    border-radius: 3px;
-    color: white;
-}
-
-.valor-local {
-    background: #3498db;
-}
-
-.valor-visitante {
-    background: #e74c3c;
-}
-
-/* EVENTOS (GOLES, TARJETAS) */
-.evento {
+.estadistica-visitante {
     display: flex;
+    justify-content: right;
     align-items: center;
-    margin-bottom: 10px;
-    padding: 8px;
-    background: #f8f9fa;
+    gap: 20px;
+}
+
+.tiempo { 
+    font-weight: 600;
+}
+
+.marcador{
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+}
+
+.balon{
+    width: 13px;
+    height: 13px;
+}
+
+td{
+    padding: 5px;
+}
+
+.color-tarjeta{
+    color: yellow;
+    background: yellow;
+    width: 40px;
+    height: 30px;
+    margin: 0 10px 0 10px;
     border-radius: 5px;
-}
-
-.minuto {
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-weight: bold;
-    margin-right: 10px;
-    color: white;
-}
-
-.gol { background: #2ecc71; }
-.amarilla { background: #f39c12; }
-.roja { background: #e74c3c; }
-
-.jugador { 
-    font-weight: 600; 
-    margin-right: 8px;
-}
-
-.detalle { 
-    color: #7f8c8d;
-    font-style: italic;
 }
 
 /* CUERPO ARBITRAL */
@@ -261,8 +257,8 @@
 .arbitro-rol {
     font-weight: 600;
     min-width: 120px;
-    margin-right: 10px;
-}
+    margin-right: 10px; 
+} 
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
