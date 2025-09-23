@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAY MATCH</title>
+          <link rel="icon" type="imagen/jpg" href="../../Images/Logo.png">
+          <link rel="stylesheet" href="../../CSS/Global/globalUsuario.css">
+          <link rel="stylesheet" href="../../CSS/Aficionado/seleccionarRol.css">
+  </head>
+  <body>
+      <header>
+        <div class="top-bar">
+          <div class="left-size">
+            <img src="../../Images/Logo.png" alt="Logo" class="logo">
+            <h1 class="titulo">Play Match</h1>
+            
+        
+
+            <nav class = "menu"> 
+              <a href="principalAficionado.html">Principal/Torneos</a>
+              <a href="partidosAficionado.html">Partidos</a>
+              <a href="buscarEquiposAficionados.html">Equipos</a>
+            </nav>
+          </div>
+
+
+          <div class="buttons-container">      
+
+            <div class="menu-usuario">
+                <button class="boton-usuario">
+                    <img src="../../Images/silueta.png" alt="Usuario" class="imagen-usuario">
+                </button>
+                <div class="menu-desplegable">
+                    <a href="opcionesDeUsuario.html">Opciones de Usuario</a>
+                    <div class="separador"></div>
+                    <a href="cerrarSesion.html" class="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </header>
+
+    <main>
+      <div class="Contenedor-Roles">
+        <h1>Selecciona tú rol</h1>
+        <p>Seleccione:</p>
+
+        <button class="boton-seleccionado" onclick="location.href='principalAficionado.html'">Aficionado</button>
+        <button class="boton-normal" onclick="location.href='solicitudRol.html'">Solicitar roles</button>
+      </div>
+    </main>
+
+    <script src="../../JavaScript/usuarioBoton.js"></script>
+  </body>
+</html>
+
+
+
+
