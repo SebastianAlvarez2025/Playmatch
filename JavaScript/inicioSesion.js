@@ -11,6 +11,21 @@ const usuarios = {
     "jugador@gmail.com":{
         password: "123456789",
         redirect: "../../HTML/Jugador/principalJugador.html"
+    },
+
+    "entrenador@gmail.com":{
+        password: "123456789",
+        redirect: "../../HTML/Entrenador/principalEntrenador.html"
+    },
+
+    "juez@gmail.com":{
+        password: "123456789",
+        redirect: "../../HTML/Juez/principalJuez.html"
+    },
+
+    "jugador@gmail.com":{
+        password: "123456789",
+        redirect: "../../HTML/Organizador/principalOrganizador.html"
     }
 };
 
