@@ -3,6 +3,10 @@ const emailInput = document.querySelector("input[type='email']");
 const passInput = document.querySelector("input[type='password']");
 
 const usuarios = {
+    "administrador@gmail.com":{
+        password: "123456789",
+        redirect: "../../HTML/Administrador/principalAdmin.html"
+    },
     "aficionado@gmail.com":{
         password: "123456789",
         redirect: "../../HTML/Aficionado/principalAficionado.html"
@@ -23,7 +27,7 @@ const usuarios = {
         redirect: "../../HTML/Juez/principalJuez.html"
     },
 
-    "jugador@gmail.com":{
+    "organizador@gmail.com":{
         password: "123456789",
         redirect: "../../HTML/Organizador/principalOrganizador.html"
     }
