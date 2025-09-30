@@ -6,7 +6,7 @@
     <title>PLAY MATCH</title>
           <link rel="icon" type="imagen/jpg" href="../../Images/Logo.png">
           <link rel="stylesheet" href="../../CSS/Global/globalUsuario.css">
-          <link rel="stylesheet" href="../../CSS/Entrenador/actualizacionJugador.css">
+          <link rel="stylesheet" href="../../CSS/Entrenador/actualizacionDatos.css">
   </head>
   <body>
       <header>
@@ -47,53 +47,52 @@
 
     <main>
         <div class="formulario">
-            <h2>Editar datos del equipo</h2>
+            <h2>Editar jugador</h2>
             <form>
                 <div class="grupo">
-                    <label>Nombre del equipo: *</label>
-                    <input type="text" name="nombre_equipo" required>
+                    <label>Nombre del jugador: *</label>
+                    <input type="text" name="nombre_jugador" value="Sebastian Alvarez" readonly>
                 </div>
 
                 <div class="grupo">
-                    <label>Categoría del equipo: *</label>
-                    <select name="categoria" required>
-                        <option value="" disabled selected hidden>Masculino-Sub17</option>
-                        <option value="masculino_sub17">Masculino-Sub17</option>
-                        <option value="masculino_sub18">Masculino-Sub18</option>
-                        <option value="femenino_sub17">Femenino-Sub17</option>
+                    <label>Dorsal del jugador: *</label>
+                    <input type="number" name="dorsal_jugador" value="10">
+                </div>
+
+                <div class="grupo">
+                    <label>Número de contacto: *</label>
+                    <input type="number" name="numero_jugador" value="3218204529">
+                </div>
+
+                <div class="grupo">
+                    <label>Posición del jugador: *</label>
+                    <select name="posicion_jugador" required>
+                        <option value="portero">PO</option>
+                        <option value="lateral_izquierdo">LI</option>
+                        <option value="lateral_derecho">LD</option>
+                        <option value="defensa_central">DFC</option>
+                        <option value="medio_defensivo">MCD</option>
+                        <option value="medio_centro">MC</option>
+                        <option value="medio_izquierdo">MI</option>
+                        <option value="medio_derecho">MD</option>
+                        <option value="medio_ofensivo" selected>MCO</option>
+                        <option value="extremo_izquierdo">EI</option>
+                        <option value="extremo_derecho">ED</option>
+                        <option value="delantero">DC</option>
                     </select>
                 </div>
 
                 <div class="grupo">
-                    <label>Tipo de equipo: *</label>
-                    <select name="tipo_equipo" required>
-                        <option value="" disabled selected hidden>Aficionado</option>
-                        <option value="aficionado">Aficionado</option>
-                        <option value="semiprofesional">Semiprofesional</option>
-                        <option value="profesional">Profesional</option>
+                    <label>Estado del jugador: *</label>
+                    <select name="estado_jugador" required>
+                        <option value="activo" selected>Activo</option>
+                        <option value="lesionado">Lesionado</option>
+                        <option value="suspendido">Suspendido</option>
+                        <option value="vacaciones">En vacaciones</option>
                     </select>
                 </div>
 
-                <div class="grupo">
-                    <label>Estado de las inscripciones: *</label>
-                    <select name="estado_inscripciones" required>
-                        <option value="" disabled selected hidden>Abiertas</option>
-                        <option value="abiertas">Abiertas</option>
-                        <option value="cerradas">Cerradas</option>
-                    </select>
-                </div>
-
-                <div class="grupo">
-                    <label>Nombre del entrenador: *</label>
-                    <input type="text" name="entrenador" required>
-                </div>
-
-                <div class="grupo">
-                    <label>Escudo del equipo e imagenes referentes: *</label>
-                    <input type="file" name="imagenes" accept="image/*">
-                </div>
-
-                <button class="boton-confirmar" onclick="location.href='confirmacionEdicionEquipo.html'">Editar equipo</button>
+                <button type="button"  class="boton-confirmar" onclick="location.href='jugadoresEquipoEntrenador.html'">Editar jugador</button>
             </form>
         </div>
     </main>
