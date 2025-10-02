@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Match - Confirmación</title>
+  <link rel="icon" type="imagen/jpg" href="../../Images/Logo.png">
+  <link rel="stylesheet" href="../../CSS/Global/globalUsuario.css">
+  <link rel="stylesheet" href="../../CSS/Jugador/inscripcionEquiposJugador.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+          <div class="left-size">
+            <img src="../../Images/Logo.png" alt="Logo" class="logo">
+            <h1 class="titulo">Play Match</h1>
+          </div>
+
+
+          <div class="buttons-container">      
+
+            <div class="menu-usuario">
+                <button class="boton-usuario">
+                    <img src="../../Images/silueta.png" alt="Usuario" class="imagen-usuario">
+                </button>
+                <div class="menu-desplegable">
+                    <a href="opcionesDeUsuario.html">Opciones de Usuario</a>
+                    <div class="separador"></div>
+                    <a href="cerrarSesion.html" class="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+  </header>
+
+  <!-- Mensaje de confirmación -->
+  <main>
+    <section class="confirmation-box">
+      <div class="icono">✔</div>
+      <div class="confirmation-message">
+        <h2>INSCRIPCION DE EQUIPOS - PLAYMATCH</h2>
+        <p>
+          La solicitud para inscribirse al equipo ha sido
+          recibida, se notificara al equipo y ellos se pondran en contacto por 
+          medio del correo asociado a su cuenta.
+        </p>
+      </div>
+      <div class="btn-container">
+        <button class="btn-confirm" onclick="location.href='equiposJugador.html'">Confirmar</button>
+      </div>
+    </section>
+  </main>
+  <script src="../../JavaScript/usuarioBoton.js"></script>
+</body>
+</html>
