@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>play match</title>
+    <link rel="icon" type="imagen/jpg" href="../../Images/Logo.png">
+    <link rel="stylesheet" href="../../CSS/Global/globalUsuario.css">
+    <link rel="stylesheet" href="../../CSS/Visitante/tabla-posiciones.css">
+    <link rel="stylesheet" href="../../CSS/Juez/partidosJuez2.css">
+</head>
+<body>
+
+    
+    <header>
+      <div class="top-bar">
+        <div class="left-size">
+          <img src="../../Images/Logo.png" alt="Logo" class="logo">
+          <h1 class="titulo">Play Match</h1>
+      
+
+          <nav class = "menu">
+            <a href="buscartorneos.html">Buscar Torneos</a>
+            <a href="partidos.html">Partidos</a>
+            <a href="equipos.html">Equipos</a>
+          </nav>
+        </div>
+
+
+        <div class="buttons-container">      
+            <section class="seleccionar">
+                <button type="button" onclick="location.href='seleccionarRol.html'">Seleccionar rol</button>
+            </section>
+
+            <div class="menu-usuario">
+                <button class="boton-usuario">
+                    <img src="../../Images/silueta.png" alt="Usuario" class="imagen-usuario">
+                </button>
+                <div class="menu-desplegable">
+                    <a href="opcionesDeUsuario.html">Opciones de Usuario</a>
+                    <div class="separador"></div>
+                    <a href="cerrarSesion.html" class="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
+            
+          </div>
+
+    </header>
+
+<center>
+    <div class="caja">
+        <div class="bottones-tabla">
+
+            <span class="torneo">               
+                <table>
+                    <tr>
+                        <td>
+                            <img class="imagen-torneo" src="../../Images/torneo1.jpg">
+                        </td>
+                        <td>
+                            <span>NOMBRE DEL TORNEO</span>
+                        </td>
+                    </tr>
+                </table>
+            </span>
+
+            <span class="botton">
+                <button class="bottones" type="button" onclick="location.href='partidosJuez2.html'">PARTIDOS</button>
+                <button class="bottones" type="button" onclick="location.href='resultadoJuez2.html'">RESULTADO</button>
+            </span>        
+        </div>
+         <div class="plantilla">
+            <select class="jornada">
+                <option>Jornada 1</option>
+                <option>Jornada 2</option>
+            </select>
+            <center>
+                <div class="partidos-lista">
+                    <!-- PARTIDO 1 -->
+                    <div class="partido">
+                        <input type="checkbox" id="partido1" class="partido-checkbox">
+                        <label for="partido1" class="partido-encabezado">
+                            <div class="partido-info">
+                                <p>12/09/2025 <br> 16:00</p>
+                            </div>
+                            <div class="equipos">
+                                <span class="equipo">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img class="escudo-vs" src="../../Images/eq1.png">
+                                            </td>
+                                            <td>
+                                                <span>Real Madrid</span>
+                                            </td>
+                                        </tr>
+                                     </table>
+                                </span>
+                                <span class="resultado">VS</span>
+                                <span class="equipo">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span>Barcelona</span>
+                                            </td>
+                                            <td>
+                                                <img class="escudo-vs" src="../../Images/eq2.png">
+                                            </td>
+                                        </tr>
+                                     </table>
+                                </span>
+                            </div>
+                            <span class="flecha">$</span>
+                        </label>
+                        
+                        <div class="partido-detalles">
+                            <div class="detalles-cuerpo">
+                               
+                                <div class="seccion">
+                                    <h3>Cuerpo Arbitral</h3>
+                                    <div class="arbitro-item">
+                                        <span class="arbitro-rol">Árbitro Central:</span>
+                                        <span class="arbitro-nombre">Jorge Bautista</span>
+                                    </div>
+                                    <div class="arbitro-item">
+                                        <span class="arbitro-rol">Asistentes:</span>
+                                        <span class="arbitro-nombre">Jesús Cañón, Sebastián Alvarez, Kevin Cerpa</span>
+                                        <br><br>
+                                        <button class="bottones" type="button" onclick="location.href='reportePartidoJuez.html'">reportes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                        
+                        
+                    </div>
+                </div>
+            </center> 
+        </div>  
+    </div>
+</center>
+<script src="../../JavaScript/TorneoDatos.js"></script>
+<script src="../../JavaScript/usuarioBoton.js"></script>
+</body>
+</html>

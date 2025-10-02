@@ -250,8 +250,8 @@ td{
 
 /* CUERPO ARBITRAL */
 .arbitro-item {
-    display: flex;
-    margin-bottom: 10px;
+    /* display: flex;
+    margin-bottom: 10px; */
 }
 
 .arbitro-rol {
