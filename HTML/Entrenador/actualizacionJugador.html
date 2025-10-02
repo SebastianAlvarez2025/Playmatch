@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAY MATCH</title>
+          <link rel="icon" type="imagen/jpg" href="../../Images/Logo.png">
+          <link rel="stylesheet" href="../../CSS/Global/globalUsuario.css">
+          <link rel="stylesheet" href="../../CSS/Entrenador/actualizacionDatos.css">
+  </head>
+  <body>
+      <header>
+        <div class="top-bar">
+          <div class="left-size">
+            <img src="../../Images/Logo.png" alt="Logo" class="logo">
+            <h1 class="titulo">Play Match</h1>
+            
+        
+
+            <nav class = "menu"> 
+              <a href="buscarEquiposEntrenador.html">Buscar Torneos</a>
+              <a href="partidosEntrenador.html">Partidos</a>
+              <a href="equiposEntrenador.html">Equipos</a>
+            </nav>
+          </div>
+
+
+          <div class="buttons-container">      
+            <section class="seleccionar">
+                <button type="button" onclick="location.href='seleccionarRolEntrenador.html'">Seleccionar rol</button>
+            </section>
+
+            <div class="menu-usuario">
+                <button class="boton-usuario">
+                    <img src="../../Images/silueta.png" alt="Usuario" class="imagen-usuario">
+                </button>
+                <div class="menu-desplegable">
+                    <a href="opcionesDeUsuario.html">Opciones de Usuario</a>
+                    <div class="separador"></div>
+                    <a href="cerrarSesion.html" class="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </header>
+
+    <main>
+        <div class="formulario">
+            <h2>Editar jugador</h2>
+            <form>
+                <div class="grupo">
+                    <label>Nombre del jugador: *</label>
+                    <input type="text" name="nombre_jugador" value="Sebastian Alvarez" readonly>
+                </div>
+
+                <div class="grupo">
+                    <label>Dorsal del jugador: *</label>
+                    <input type="number" name="dorsal_jugador" value="10">
+                </div>
+
+                <div class="grupo">
+                    <label>Número de contacto: *</label>
+                    <input type="number" name="numero_jugador" value="3218204529">
+                </div>
+
+                <div class="grupo">
+                    <label>Posición del jugador: *</label>
+                    <select name="posicion_jugador" required>
+                        <option value="portero">PO</option>
+                        <option value="lateral_izquierdo">LI</option>
+                        <option value="lateral_derecho">LD</option>
+                        <option value="defensa_central">DFC</option>
+                        <option value="medio_defensivo">MCD</option>
+                        <option value="medio_centro">MC</option>
+                        <option value="medio_izquierdo">MI</option>
+                        <option value="medio_derecho">MD</option>
+                        <option value="medio_ofensivo" selected>MCO</option>
+                        <option value="extremo_izquierdo">EI</option>
+                        <option value="extremo_derecho">ED</option>
+                        <option value="delantero">DC</option>
+                    </select>
+                </div>
+
+                <div class="grupo">
+                    <label>Estado del jugador: *</label>
+                    <select name="estado_jugador" required>
+                        <option value="activo" selected>Activo</option>
+                        <option value="lesionado">Lesionado</option>
+                        <option value="suspendido">Suspendido</option>
+                        <option value="vacaciones">En vacaciones</option>
+                    </select>
+                </div>
+
+                <button type="button"  class="boton-confirmar" onclick="location.href='jugadoresEquipoEntrenador.html'">Editar jugador</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../../JavaScript/usuarioBoton.js"></script>
+  </body>
+</html>

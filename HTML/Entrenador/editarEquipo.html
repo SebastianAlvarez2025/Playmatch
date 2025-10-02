@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PLAY MATCH</title>
         <link rel="icon" type="imagen/jpg" href="../../Images/Logo.png">
-        <link rel="stylesheet" href="../../CSS/Global/global.css">
-        <link rel="stylesheet" href="../../CSS/Visitante/datosEquipoVisi.css">
+        <link rel="stylesheet" href="../../CSS/Global/globalUsuario.css">
+        <link rel="stylesheet" href="../../CSS/Entrenador/editarEquipo.css">
 </head>
 <body>
     <header>
@@ -17,23 +17,30 @@
       
 
           <nav class = "menu">
-            <a href="../../index.html">Principal</a>
-            <a href="partidos.html">Partidos</a>
-            <a href="buscarEquiposVisitante.html">Equipos</a>
+            <a href="principalEntrenador.html">Principal</a>
+            <a href="partidosEntrenador.html">Partidos</a>
+            <a href="equiposEntrenador.html">Equipos</a>
           </nav>
         </div>
 
 
         <div class="buttons-container">      
-            <section class="sigin">
-                <button type="button" onclick="location.href='registrarse.html'">Registrarse</button>
+            <section class="seleccionar">
+                <button type="button" onclick="location.href='seleccionarRolEntrenador.html'">Seleccionar rol</button>
             </section>
 
-            <section class="login">
-                <button type="button" onclick="location.href='ingreso.html'">Inicio de sesion</button>
-            </section>
+            <div class="menu-usuario">
+                <button class="boton-usuario">
+                    <img src="../../Images/silueta.png" alt="Usuario" class="imagen-usuario">
+                </button>
+                <div class="menu-desplegable">
+                    <a href="opcionesDeUsuario.html">Opciones de Usuario</a>
+                    <div class="separador"></div>
+                    <a href="cerrarSesion.html" class="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
             
-          </div>
+        </div>
           
         </div>
       </div>
@@ -63,8 +70,9 @@
         </div>
 
         <div class="botones-container">
+            <button onclick="location.href='actualizacionDatos.html'">Editar datos del equipo</button>
           <button onclick="location.href='estadisticasHistoAficio.html'">Estadisticas historicas del equipo</button>
-          <button onclick="location.href='jugadoresVisitante.html'">Visualizar jugadores</button>
+          <button onclick="location.href='jugadoresEquipoEntrenador.html'">Visualizar jugadores</button>
          </div>
       </div>
     </header>
