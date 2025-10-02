@@ -47,11 +47,41 @@
 
     <main class="contenedor">
       <div class="caja">  
-        <h2>Estadísticas de Partido - CP: 001922</h2>
+        <h2>Reporte del partido</h2>
+        <div> 
+                            <div class="equipos">
+                                <span class="equipo">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img class="escudo-vs" src="../../Images/eq1.png">
+                                            </td>
+                                            <td>
+                                                <span>Real Madrid</span>
+                                            </td>
+                                        </tr>
+                                     </table>
+                                </span>
+                                <span class="resultado">28:55'</span>
+                                <span class="equipo">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span>Barcelona</span>
+                                            </td>
+                                            <td>
+                                                <img class="escudo-vs" src="../../Images/eq2.png">
+                                            </td>
+                                        </tr>
+                                     </table>
+                                </span>
+                            </div>
+                        </div>
+     </div>
 
         <form class="formulario">
-            <label>Partido:
-                <input type="text" value="0019223 Los tigres F.C vs Plata F.C" readonly>
+            <label>codigo del partido:
+                <input type="text" value="0019223" readonly>
             </label>
 
             <div class="fila">
@@ -161,8 +191,11 @@
             <label>Observaciones:
                 <textarea rows="4"></textarea>
             </label>
-
+            <span class="botones">
             <button type="submit" class="btn-agregar">Añadir estadísticas</button>
+            <button type="submit" class="btn-visualizar">Visualizar estadísticas</button>
+            <button type="submit" class="btn-finalizar">Finalizar estadísticas</button>
+            </span>
         </form>
       </div>  
     </main>
