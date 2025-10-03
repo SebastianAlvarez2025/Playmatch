@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>play match</title>
+    <title>PLAY MATCH</title>
     <link rel="icon" type="imagen/jpg" href="../../Images/Logo.png">
     <link rel="stylesheet" href="../../CSS/Global/globalUsuario.css">
-    <link rel="stylesheet" href="../../CSS/Visitante/tabla-posiciones.css">
+    <link rel="stylesheet" href="../../CSS/Juez/reportePartidoJuez.css">
     <link rel="stylesheet" href="../../CSS/Visitante/resultado-equipo.css">
 </head>
 <body>
+        <header>
+        <div class="top-bar">
+          <div class="left-size">
+            <img src="../../Images/Logo.png" alt="Logo" class="logo">
+            <h1 class="titulo">Play Match</h1>
+            
+        
 
-    
-    <header>
-      <div class="top-bar">
-        <div class="left-size">
-          <img src="../../Images/Logo.png" alt="Logo" class="logo">
-          <h1 class="titulo">Play Match</h1>
-      
-
-          <nav class = "menu"> 
+            <nav class = "menu"> 
               <a href="principalJuez.html">Buscar Torneos</a>
               <a href="partidosJuez2.html">Partidos</a>
               <a href="equiposJuez.html">Equipos</a>
             </nav>
-        </div>
+          </div>
 
 
-        <div class="buttons-container">      
+          <div class="buttons-container">      
             <section class="seleccionar">
                 <button type="button" onclick="location.href='seleccionarRolJuez.html'">Seleccionar rol</button>
             </section>
@@ -43,48 +42,15 @@
                 </div>
             </div>
             
+          </div>
         </div>
+      </header>
 
-    </header>
-
-<center>
-    <div class="caja">
-        <div class="bottones-tabla">
-
-            <span class="torneo">               
-                <table>
-                    <tr>
-                        <td>
-                            <img class="imagen-torneo" src="../../Images/torneo1.jpg">
-                        </td>
-                        <td>
-                            <span>NOMBRE DEL TORNEO</span>
-                        </td>
-                    </tr>
-                </table>
-            </span>
-
-            <span class="botton">
-                <button class="bottones" type="button" onclick="location.href='partidosJuez2.html'">PARTIDOS</button>
-                <button class="bottones" type="button" onclick="location.href='resultadoJuez2.html'">RESULTADO</button>
-            </span>        
-        </div>
-
-        <div class="plantilla">
-            <select class="jornada">
-                <option>Jornada 1</option>
-                <option>Jornada 2</option>
-            </select>
-            <center>
-                <div class="partidos-lista">
-                    <!-- PARTIDO 1 -->
-                    <div class="partido">
-                        <input type="checkbox" id="partido1" class="partido-checkbox">
-                        <label for="partido1" class="partido-encabezado">
-                            <div class="partido-info">
-                                <p>12/09/2025</p>
-                            </div>
-                            <div class="equipos">
+    <main class="contenedor">
+    <div class="caja">  
+        <h2>Reporte del partido</h2>
+        <div> 
+                        <div class="equipos">
                                 <span class="equipo">
                                     <table>
                                         <tr>
@@ -97,7 +63,7 @@
                                         </tr>
                                      </table>
                                 </span>
-                                <span class="resultado">3 - 1</span>
+                                <span class="resultado">28:55'</span>
                                 <span class="equipo">
                                     <table>
                                         <tr>
@@ -111,11 +77,10 @@
                                      </table>
                                 </span>
                             </div>
-                            <span class="flecha">▼</span>
-                        </label>
-                        
-                        <div class="partido-detalles">
-                            <div class="detalles-cuerpo">
+                        </div>
+     </div>
+
+     <div class="detalles-cuerpo">
                                 <div class="seccion">
                                     <h3>1ER TIEMPO</h3>
                                     <div class="detalle-equipo">
@@ -273,28 +238,16 @@
                                     </div>
                                 </div>
 
-                                <div class="seccion">
-                                    <h3>Cuerpo Arbitral</h3>
-                                    <div class="arbitro-item">
-                                        <span class="arbitro-rol">Árbitro Central:</span>
-                                        <span class="arbitro-nombre">Jorge Bautista</span>
-                                    </div>
-                                    <div class="arbitro-item">
-                                        <span class="arbitro-rol">Asistentes:</span>
-                                        <span class="arbitro-nombre">Jesús Cañón, Sebastián Alvarez, Kevin Cerpa</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-            </center> 
-        </div>
-          
-    </div>
-</center>
-   
+       
+            <span class="botones">
+            <button type="submit" class="btn-agregar" onclick="location.href='reportePartidoJuez.html'">Añadir estadísticas</button>
+            <button type="button" class="btn-visualizar" onclick="location.href='reportePartidoJuez2.html'">Visualizar estadísticas</button>
+            <button type="button" class="btn-finalizar" onclick="location.href='resultadoJuez2.html'">Finalizar estadísticas</button>
+            </span>
+        </form>
+      </div>  
+    </main>
+    <script src="../../JavaScript/TorneoDatos.js"></script>
+  <script src="../../JavaScript/usuarioBoton.js"></script>
 </body>
 </html>
