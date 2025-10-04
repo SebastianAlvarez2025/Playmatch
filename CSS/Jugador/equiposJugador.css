@@ -106,3 +106,21 @@
   transition: transform 0.15s ease;
   margin-top: 0.8rem;
 }
+.misEquipos {
+  font-size: 12px;
+  font-weight: bold;
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.misEquipos:hover {
+  background: rgb(232, 247, 224);
+  transform: scale(1.0);
+}
+
