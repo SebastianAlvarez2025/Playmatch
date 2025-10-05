@@ -46,15 +46,16 @@
   
 }
 
-.botones-container{
+.botones-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  align-items: center;
+  width: 100%;         
+  gap: 10px;
   margin-top: 15px;
-  justify-content: right;
+  
 }
 
-.botones-container button{
+.botones-container button {
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: normal;
   color: black;
@@ -67,8 +68,15 @@
   font-size: 12px;
 }
 
-.botones-container button:hover{
+.botones-container button:hover {
   color: rgb(255, 174, 1);
   border-color: #000;
 }
+
+
+.botones-container .infEquipo {
+  margin-right: auto  !important;
+  margin-left: 30px;
+}
+
 
